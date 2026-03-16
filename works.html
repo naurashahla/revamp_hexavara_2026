@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexavara - Works</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48"
+    />
     <link rel="stylesheet" href="css/works.css" />
+    <link rel="stylesheet" href="css/scroll_top.css" />
   </head>
   <body>
     <div class="clients-page">
@@ -21,15 +26,57 @@
           <a class="nav-link" href="index.html#works">Works</a>
           <a class="nav-link" href="about_us.html">About Us</a>
           <a class="nav-link" href="service.html">Services</a>
-          <a class="nav-link" href="index.html#solutions">Solutions</a>
+          <button
+            class="nav-link nav-solutions-trigger"
+            id="solutions-trigger"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="solutions-mega-menu"
+          >
+            Solutions
+          </button>
         </nav>
+
+        <div class="solutions-mega-menu" id="solutions-mega-menu" aria-hidden="true">
+          <div class="solutions-mega-menu-inner">
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Service</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><span>Enterprise Resource Planning</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>Customer Relationship Management</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">query_stats</span><span>Business Intelligence &amp; Analytics</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">cloud_sync</span><span>Cloud Migration &amp; Strategy</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span><span>Cybersecurity &amp; Compliance</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Industry</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>Consumer Goods</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">monitor_heart</span><span>Healthcare</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">conveyor_belt</span><span>Supply Chain</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Ready to Use Platform</h3>
+              <div class="solutions-platform-list">
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-teal"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span></div><div><p class="solutions-platform-name">Crowdfunding</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-red"><span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span></div><div><p class="solutions-platform-name">Corporate Budgeting</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-orange"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div><div><p class="solutions-platform-name">E-Commerce</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-green"><span class="material-symbols-outlined" aria-hidden="true">event</span></div><div><p class="solutions-platform-name">Event Management</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-blue"><span class="material-symbols-outlined" aria-hidden="true">storefront</span></div><div><p class="solutions-platform-name">Multi-Merchant</p><p class="solutions-platform-meta">Platform</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="header-actions">
           <div class="language-switch" aria-label="Language switcher">
-            <button type="button" class="lang-button active">EN</button>
-            <button type="button" class="lang-button">ID</button>
+            <button type="button" class="lang-button active" id="lang-en-btn" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" id="lang-id-btn" aria-pressed="false">ID</button>
           </div>
-          <a class="header-cta" href="#consult">Start a Project?</a>
+          <a class="header-cta" href="cta.html">Start a Project?</a>
         </div>
       </header>
 
@@ -308,7 +355,7 @@
               Discuss your IT challenges, and our team of experienced experts will
               provide tailored solutions to drive your business growth and success.
             </div>
-            <a class="cta-button" href="mailto:info@hexavara.com">Consult Now</a>
+            <a class="cta-button" href="cta.html">Consult Now</a>
           </div>
         </section>
       </main>
@@ -355,6 +402,7 @@
                 <div class="footer-social-links">
                   <a class="footer-social-link" href="https://www.instagram.com/hexavara/" target="_blank" rel="noopener noreferrer">Instagram</a>
                   <a class="footer-social-link" href="https://www.linkedin.com/company/hexavara-technology/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a class="footer-social-link" href="https://api.whatsapp.com/send?phone=628113451550" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -368,7 +416,356 @@
       </footer>
     </div>
 
+    <button type="button" class="global-scroll-top-btn" aria-label="Back to top"><span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span></button>
+
     <script>
+      (function () {
+        var trigger = document.getElementById('solutions-trigger');
+        var menu = document.getElementById('solutions-mega-menu');
+        var closeTimer = null;
+
+        if (!trigger || !menu) {
+          return;
+        }
+
+        function isOpen() {
+          return menu.classList.contains('is-open');
+        }
+
+        function openMenu() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+            closeTimer = null;
+          }
+          menu.classList.add('is-open');
+          trigger.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          menu.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+          menu.classList.remove('is-open');
+          trigger.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        }
+
+        function scheduleClose() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+          }
+          closeTimer = setTimeout(closeMenu, 120);
+        }
+
+        trigger.addEventListener('click', function (event) {
+          event.stopPropagation();
+          if (isOpen()) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        trigger.addEventListener('mouseenter', openMenu);
+        trigger.addEventListener('mouseleave', scheduleClose);
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', scheduleClose);
+
+        trigger.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (isOpen()) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          }
+
+          if (event.key === 'Escape') {
+            closeMenu();
+            trigger.blur();
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && isOpen()) {
+            closeMenu();
+          }
+        });
+      })();
+
+      (function () {
+        var enBtn = document.getElementById('lang-en-btn');
+        var idBtn = document.getElementById('lang-id-btn');
+
+        if (!enBtn || !idBtn) {
+          return;
+        }
+
+        var translations = {
+          en: {
+            title: 'Hexavara - Works',
+            nav: ['Works', 'About Us', 'Services', 'Solutions'],
+            solutionsTitles: ['Solution by Service', 'Solution by Industry', 'Ready to Use Platform'],
+            solutionsLinks: [
+              'Enterprise Resource Planning',
+              'Customer Relationship Management',
+              'Business Intelligence & Analytics',
+              'Cloud Migration & Strategy',
+              'Cybersecurity & Compliance',
+              'Consumer Goods',
+              'Healthcare',
+              'Supply Chain'
+            ],
+            platformNames: ['Crowdfunding', 'Corporate Budgeting', 'E-Commerce', 'Event Management', 'Multi-Merchant'],
+            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
+            headerCta: 'Start a Project?',
+            heroTitle: 'Consult, Design,<br />&amp; <span class="hero-accent">Develop</span>',
+            heroDescription: 'Help businesses realize their digitalization goals. Use Free 60-minute consultation to start your digital journey.',
+            sectionTitle: 'Our Works',
+            sectionDescription: 'Experience innovation, explore excellence. Our Works exhibit a harmonious blend of creativity and functionality, setting new standards in design and client satisfaction.',
+            chips: ['All', 'Software Development', 'Digital Branding', 'Startup Incubator', 'IT Consultant'],
+            badges: {
+              softdev: 'Software Development',
+              digital: 'Digital Branding',
+              startup: 'Startup Incubator',
+              it: 'IT Consultant'
+            },
+            descriptions: [
+              'Effortless online booking experience for home internet installation, enriched with advanced GIS features.',
+              'Zelltech\'s application: A powerful tool for PT Celcius Indo Perkasa, enabling seamless sales tracking and project monitoring.',
+              'Efficient system facilitating inventory tracking for MJA Company, a trusted Unilever distributor.',
+              'Revolutionizing property assessments, PT. WIKA Gedung employs an innovative application for surveying residential units at Puncak CBD Apartments.',
+              'Unveiling the Lamongan District\'s Smart City Portal App. Explore 360-degree photos, report issues, and ensure swift emergency responses.',
+              'Application used by the Public Works and Housing Department of Banjarbaru City to search for information on spatial planning.',
+              'Application for supervision of telecommunication towers in Pamekasan Regency by the Department of Communication and Information Technology.',
+              'The promotional video showcases the Manufacturing Engineering program at the University of Surabaya, highlighting its unique features and offerings.',
+              'Revitalizing the digital marketing strategy for Queen Aisya Salon and SPA through a comprehensive rebranding initiative.',
+              'Crafting an engaging aerial company profile video for PT JMF, showcasing their expertise and services from a captivating perspective.',
+              'Digital startup incubation guiding startups focused on hospital management systems, covering investment and managed services.',
+              'Digital-based startup incubation providing community event news and event management, focused on Tech Investment and Tech Consultants.',
+              'Digital-based startup incubation providing a project monitoring application for construction contractors, covering Tech Consultant and Managed Services.',
+              'Digital-based startup incubation providing manufacturing application systems for industry, covering Tech Consultant and Managed Services.',
+              'Digital-based startup incubation providing cooperative organization information systems, covering Tech Investment and Business Consultant.',
+              'Analysis and development of application systems involving planning, design, and development to meet user needs of KOPERASI KANA.',
+              'Technology for real-time livestock condition monitoring in collaboration with Telkom Indonesia for the Lamongan district government.',
+              'Online platform for managing student admissions, including registration, data verification, selection, and announcement of results.',
+              'Analysis and development of application systems involving planning and design to meet the user needs of KOPERASI BMT MUDA.',
+              'Development of a prototype (POC) to prove that the design concept for the job center application can be carried out and implemented.',
+              'Technology implementation planning for building mapping using digital imagery, in collaboration with Telkom Indonesia for the Lamongan district government.'
+            ],
+            ctaBadge: 'Ready to Get Started?',
+            ctaHeading: 'Get the Right IT Solutions from the<br />\n              <span class="cta-blue">Best IT Vendor</span> - Consult with Us Today!',
+            ctaDescription: 'Discuss your IT challenges, and our team of experienced experts will provide tailored solutions to drive your business growth and success.',
+            ctaButton: 'Consult Now',
+            footerBrandTag: 'Software Development and IT Consulting',
+            footerHeadings: ['Company', 'Contact Us', 'Follow Us'],
+            footerLinks: ['Works', 'About Us', 'Services', 'Solutions'],
+            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
+            footerCopyright: '© 2026 Hexavara Tech. All rights reserved.'
+          },
+          id: {
+            title: 'Hexavara - Portofolio',
+            nav: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
+            solutionsTitles: ['Solusi Berdasarkan Layanan', 'Solusi Berdasarkan Industri', 'Platform Siap Pakai'],
+            solutionsLinks: [
+              'Perencanaan Sumber Daya Perusahaan (ERP)',
+              'Manajemen Hubungan Pelanggan (CRM)',
+              'Business Intelligence & Analitik',
+              'Migrasi & Strategi Cloud',
+              'Keamanan Siber & Kepatuhan',
+              'Barang Konsumsi',
+              'Kesehatan',
+              'Rantai Pasok'
+            ],
+            platformNames: ['Crowdfunding', 'Anggaran Perusahaan', 'E-Commerce', 'Manajemen Acara', 'Multi-Merchant'],
+            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
+            headerCta: 'Mulai Proyek?',
+            heroTitle: 'Konsultasi, Rancang,<br />&amp; <span class="hero-accent">Kembangkan</span>',
+            heroDescription: 'Bantu bisnis mewujudkan transformasi digitalnya. Manfaatkan konsultasi gratis 60 menit untuk memulai perjalanan digital Anda.',
+            sectionTitle: 'Portofolio Kami',
+            sectionDescription: 'Lihat inovasi dan kualitas kerja kami. Portofolio ini menampilkan perpaduan kreativitas dan fungsi untuk menghasilkan solusi terbaik bagi klien.',
+            chips: ['Semua', 'Pengembangan Software', 'Branding Digital', 'Inkubator Startup', 'Konsultan TI'],
+            badges: {
+              softdev: 'Pengembangan Software',
+              digital: 'Branding Digital',
+              startup: 'Inkubator Startup',
+              it: 'Konsultan TI'
+            },
+            descriptions: [
+              'Pengalaman pemesanan online pemasangan internet rumah yang praktis, dilengkapi fitur GIS tingkat lanjut.',
+              'Aplikasi Zelltech untuk PT Celcius Indo Perkasa yang memudahkan pelacakan penjualan dan monitoring proyek.',
+              'Sistem efisien untuk pelacakan inventaris MJA Company, distributor terpercaya Unilever.',
+              'Transformasi proses penilaian properti melalui aplikasi inovatif PT WIKA Gedung untuk survei unit hunian di Apartemen Puncak CBD.',
+              'Portal Smart City Kabupaten Lamongan dengan fitur foto 360 derajat, pelaporan isu, dan respons darurat cepat.',
+              'Aplikasi Dinas PUPR Kota Banjarbaru untuk pencarian informasi tata ruang.',
+              'Aplikasi pengawasan menara telekomunikasi di Kabupaten Pamekasan oleh Dinas Komunikasi dan Informatika.',
+              'Video promosi Program Teknik Manufaktur Universitas Surabaya yang menampilkan keunggulan program secara menarik.',
+              'Revitalisasi strategi pemasaran digital Queen Aisya Salon and SPA melalui inisiatif rebranding yang menyeluruh.',
+              'Pembuatan video company profile aerial PT JMF yang menonjolkan kapabilitas dan layanan perusahaan.',
+              'Inkubasi startup digital untuk mendampingi pengembangan startup yang berfokus pada sistem manajemen rumah sakit, termasuk aspek investasi dan managed services.',
+              'Inkubasi startup berbasis digital yang menyajikan informasi event komunitas dan mendukung manajemen acara, berfokus pada investasi dan konsultasi teknologi.',
+              'Inkubasi startup berbasis digital melalui aplikasi monitoring proyek untuk kontraktor konstruksi, mencakup konsultasi teknologi dan managed services.',
+              'Inkubasi startup berbasis digital melalui sistem aplikasi manufaktur untuk industri, mencakup konsultasi teknologi dan managed services.',
+              'Inkubasi startup berbasis digital melalui sistem informasi koperasi, mencakup investasi teknologi dan konsultasi bisnis.',
+              'Analisis dan pengembangan sistem aplikasi meliputi perencanaan, perancangan, dan pengembangan untuk memenuhi kebutuhan KOPERASI KANA.',
+              'Teknologi untuk monitoring kondisi ternak secara real-time bersama Telkom Indonesia untuk Pemerintah Kabupaten Lamongan.',
+              'Platform online untuk pengelolaan penerimaan siswa baru, mencakup pendaftaran, verifikasi data, seleksi, dan pengumuman hasil.',
+              'Analisis dan pengembangan sistem aplikasi melalui tahap perencanaan dan perancangan untuk memenuhi kebutuhan KOPERASI BMT MUDA.',
+              'Pengembangan prototipe (POC) untuk membuktikan bahwa konsep desain aplikasi job center dapat dijalankan dan diimplementasikan.',
+              'Perencanaan implementasi teknologi pemetaan bangunan berbasis citra digital bersama Telkom Indonesia untuk Pemerintah Kabupaten Lamongan.'
+            ],
+            ctaBadge: 'Siap Memulai?',
+            ctaHeading: 'Dapatkan Solusi IT yang Tepat dari<br />\n              <span class="cta-blue">Vendor IT Terbaik</span> - Konsultasi dengan Kami Hari Ini!',
+            ctaDescription: 'Diskusikan tantangan IT Anda, dan tim ahli kami akan memberikan solusi yang tepat untuk mendorong pertumbuhan dan keberhasilan bisnis Anda.',
+            ctaButton: 'Konsultasi Sekarang',
+            footerBrandTag: 'Pengembangan Software dan Konsultasi IT',
+            footerHeadings: ['Perusahaan', 'Kontak', 'Ikuti Kami'],
+            footerLinks: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
+            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
+            footerCopyright: '© 2026 Hexavara Tech. Seluruh hak cipta dilindungi.'
+          }
+        };
+
+        function setButtonState(lang) {
+          var isEnglish = lang === 'en';
+          enBtn.classList.toggle('active', isEnglish);
+          idBtn.classList.toggle('active', !isEnglish);
+          enBtn.setAttribute('aria-pressed', isEnglish ? 'true' : 'false');
+          idBtn.setAttribute('aria-pressed', isEnglish ? 'false' : 'true');
+        }
+
+        function applyLanguage(lang) {
+          var config = translations[lang] || translations.en;
+          var navLinks = document.querySelectorAll('.site-nav .nav-link');
+          var solutionsTitles = document.querySelectorAll('.solutions-mega-title');
+          var solutionsLinks = document.querySelectorAll('.solutions-mega-link > span:last-child');
+          var platformNames = document.querySelectorAll('.solutions-platform-name');
+          var platformMeta = document.querySelectorAll('.solutions-platform-meta');
+          var chips = document.querySelectorAll('.wc-chip');
+          var softdevBadges = document.querySelectorAll('.badge-softdev');
+          var digitalBadges = document.querySelectorAll('.badge-digital');
+          var startupBadges = document.querySelectorAll('.badge-startup');
+          var itBadges = document.querySelectorAll('.badge-it');
+          var descriptions = document.querySelectorAll('.wc-card-text');
+          var footerHeadings = document.querySelectorAll('.footer-heading');
+          var footerLinks = document.querySelectorAll('.footer-link');
+          var footerSocial = document.querySelectorAll('.footer-social-link');
+
+          document.title = config.title;
+          document.documentElement.setAttribute('lang', lang);
+
+          navLinks.forEach(function (item, index) {
+            if (config.nav[index]) {
+              item.textContent = config.nav[index];
+            }
+          });
+
+          solutionsTitles.forEach(function (item, index) {
+            if (config.solutionsTitles[index]) {
+              item.textContent = config.solutionsTitles[index];
+            }
+          });
+
+          solutionsLinks.forEach(function (item, index) {
+            if (config.solutionsLinks[index]) {
+              item.textContent = config.solutionsLinks[index];
+            }
+          });
+
+          platformNames.forEach(function (item, index) {
+            if (config.platformNames[index]) {
+              item.textContent = config.platformNames[index];
+            }
+          });
+
+          platformMeta.forEach(function (item, index) {
+            if (config.platformMeta[index]) {
+              item.textContent = config.platformMeta[index];
+            }
+          });
+
+          var headerCta = document.querySelector('.header-cta');
+          var heroTitle = document.querySelector('.hero-title');
+          var heroDescription = document.querySelector('.hero-description');
+          var sectionTitle = document.querySelector('.wc-section-title');
+          var sectionDescription = document.querySelector('.wc-section-desc');
+          var ctaBadge = document.querySelector('.cta-badge-label');
+          var ctaHeading = document.querySelector('.cta-main-heading');
+          var ctaDescription = document.querySelector('.cta-description');
+          var ctaButton = document.querySelector('.cta-button');
+          var footerBrandTag = document.querySelector('.footer-brand-tag');
+          var footerCopyright = document.querySelector('.footer-copyright');
+
+          if (headerCta) { headerCta.textContent = config.headerCta; }
+          if (heroTitle) { heroTitle.innerHTML = config.heroTitle; }
+          if (heroDescription) { heroDescription.textContent = config.heroDescription; }
+          if (sectionTitle) { sectionTitle.textContent = config.sectionTitle; }
+          if (sectionDescription) { sectionDescription.textContent = config.sectionDescription; }
+          if (ctaBadge) { ctaBadge.textContent = config.ctaBadge; }
+          if (ctaHeading) { ctaHeading.innerHTML = config.ctaHeading; }
+          if (ctaDescription) { ctaDescription.textContent = config.ctaDescription; }
+          if (ctaButton) { ctaButton.textContent = config.ctaButton; }
+          if (footerBrandTag) { footerBrandTag.textContent = config.footerBrandTag; }
+          if (footerCopyright) { footerCopyright.textContent = config.footerCopyright; }
+
+          chips.forEach(function (item, index) {
+            if (config.chips[index]) {
+              item.textContent = config.chips[index];
+            }
+          });
+
+          softdevBadges.forEach(function (item) { item.textContent = config.badges.softdev; });
+          digitalBadges.forEach(function (item) { item.textContent = config.badges.digital; });
+          startupBadges.forEach(function (item) { item.textContent = config.badges.startup; });
+          itBadges.forEach(function (item) { item.textContent = config.badges.it; });
+
+          descriptions.forEach(function (item, index) {
+            if (config.descriptions[index]) {
+              item.textContent = config.descriptions[index];
+            }
+          });
+
+          footerHeadings.forEach(function (item, index) {
+            if (config.footerHeadings[index]) {
+              item.textContent = config.footerHeadings[index];
+            }
+          });
+
+          footerLinks.forEach(function (item, index) {
+            if (config.footerLinks[index]) {
+              item.textContent = config.footerLinks[index];
+            }
+          });
+
+          footerSocial.forEach(function (item, index) {
+            if (config.footerSocial[index]) {
+              item.textContent = config.footerSocial[index];
+            }
+          });
+
+          setButtonState(lang);
+          localStorage.setItem('hexavara-lang', lang);
+        }
+
+        enBtn.addEventListener('click', function () {
+          applyLanguage('en');
+        });
+
+        idBtn.addEventListener('click', function () {
+          applyLanguage('id');
+        });
+
+        var storedLanguage = localStorage.getItem('hexavara-lang');
+        applyLanguage(storedLanguage === 'id' ? 'id' : 'en');
+      })();
+
       (function () {
         var ITEMS_PER_PAGE = 12;
         var currentFilter = 'all';
@@ -471,5 +868,6 @@
         renderCards();
       })();
     </script>
+    <script src="js/scroll_top.js"></script>
   </body>
 </html>

@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexavara</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48"
+    />
     <link rel="stylesheet" href="css/homepage1.css" />
+    <link rel="stylesheet" href="css/scroll_top.css" />
   </head>
   <body>
 <div class="homepage">
@@ -25,8 +30,117 @@
   </a>
   <a class="about-us" href="about_us.html">About Us</a>
   <a class="services" href="service.html" style="text-decoration: none; color: inherit;">Services</a> 
-  <div class="solutions">Solutions</div>
+  <button
+    class="solutions"
+    id="solutions-trigger"
+    type="button"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="solutions-mega-menu"
+  >
+    Solutions
+  </button>
   <a class="works" href="works.html" style="text-decoration: none; color: inherit;">Works</a>
+
+  <div class="solutions-mega-menu" id="solutions-mega-menu" aria-hidden="true">
+    <div class="solutions-mega-menu-inner">
+      <div class="solutions-mega-column">
+        <h3 class="solutions-mega-title">Solution by Service</h3>
+        <div class="solutions-mega-list">
+          <a class="solutions-mega-link" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">account_tree</span>
+            <span>Enterprise Resource Planning</span>
+          </a>
+          <a class="solutions-mega-link" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+            <span>Customer Relationship Management</span>
+          </a>
+          <a class="solutions-mega-link" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">query_stats</span>
+            <span>Business Intelligence &amp; Analytics</span>
+          </a>
+          <a class="solutions-mega-link" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">cloud_sync</span>
+            <span>Cloud Migration &amp; Strategy</span>
+          </a>
+          <a class="solutions-mega-link" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+            <span>Cybersecurity &amp; Compliance</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="solutions-mega-column">
+        <h3 class="solutions-mega-title">Solution by Industry</h3>
+        <div class="solutions-mega-list">
+          <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+            <span>Consumer Goods</span>
+          </a>
+          <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">monitor_heart</span>
+            <span>Healthcare</span>
+          </a>
+          <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html">
+            <span class="material-symbols-outlined" aria-hidden="true">conveyor_belt</span>
+            <span>Supply Chain</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="solutions-mega-column">
+        <h3 class="solutions-mega-title">Ready to Use Platform</h3>
+        <div class="solutions-platform-list">
+          <div class="solutions-platform-item">
+            <div class="solutions-platform-icon solutions-platform-icon-teal">
+              <span class="material-symbols-outlined" aria-hidden="true">diversity_3</span>
+            </div>
+            <div>
+              <p class="solutions-platform-name">Crowdfunding</p>
+              <p class="solutions-platform-meta">Platform</p>
+            </div>
+          </div>
+          <div class="solutions-platform-item">
+            <div class="solutions-platform-icon solutions-platform-icon-red">
+              <span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span>
+            </div>
+            <div>
+              <p class="solutions-platform-name">Corporate Budgeting</p>
+              <p class="solutions-platform-meta">Platform</p>
+            </div>
+          </div>
+          <div class="solutions-platform-item">
+            <div class="solutions-platform-icon solutions-platform-icon-orange">
+              <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+            </div>
+            <div>
+              <p class="solutions-platform-name">E-Commerce</p>
+              <p class="solutions-platform-meta">Platform</p>
+            </div>
+          </div>
+          <div class="solutions-platform-item">
+            <div class="solutions-platform-icon solutions-platform-icon-green">
+              <span class="material-symbols-outlined" aria-hidden="true">event</span>
+            </div>
+            <div>
+              <p class="solutions-platform-name">Event Management</p>
+              <p class="solutions-platform-meta">Platform</p>
+            </div>
+          </div>
+          <div class="solutions-platform-item">
+            <div class="solutions-platform-icon solutions-platform-icon-blue">
+              <span class="material-symbols-outlined" aria-hidden="true">storefront</span>
+            </div>
+            <div>
+              <p class="solutions-platform-name">Multi-Merchant</p>
+              <p class="solutions-platform-meta">Platform</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="transforming-ideas-into-digital-excellence">
     <span>
       <span class="transforming-ideas-into-digital-excellence-span">
@@ -431,6 +545,13 @@
                 </svg>
                 <span>LinkedIn</span>
               </a>
+              <a class="footer-social-link" href="https://api.whatsapp.com/send?phone=628113451550" target="_blank" rel="noopener noreferrer" aria-label="Hexavara WhatsApp">
+                <svg class="footer-social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.6 14.3C17.3 14.1 16 13.5 15.6 13.3C15.2 13.2 14.9 13.1 14.6 13.5C14.3 13.8 13.6 14.6 13.3 14.9C13.1 15.2 12.8 15.2 12.5 15C11.9 14.7 10.6 14.2 9.5 13.2C8.6 12.4 8 11.4 7.7 11.1C7.5 10.8 7.6 10.5 7.8 10.3C8 10.1 8.2 9.8 8.4 9.5C8.6 9.2 8.7 9 8.8 8.7C9 8.3 8.9 8 8.8 7.8C8.7 7.6 8.1 6.3 7.7 5.5C7.3 4.7 6.9 4.8 6.6 4.8C6.4 4.8 6.1 4.8 5.8 4.8C5.5 4.8 5 4.9 4.6 5.3C4.2 5.7 3.2 6.7 3.2 8C3.2 9.3 4.7 10.6 4.9 10.9C5.1 11.2 7.8 15.5 11.6 17C12.5 17.3 13.2 17.6 13.8 17.8C14.7 18.1 15.5 18.1 16.2 18C16.9 18 18.4 17.2 18.8 16.3C19.2 15.4 19.2 14.6 19.1 14.5C19.1 14.3 18.8 14.4 17.6 14.3Z" fill="currentColor"/>
+                  <rect x="1" y="1" width="22" height="22" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
@@ -519,17 +640,6 @@
 
       <div class="project-card" data-filter="all software-development">
         <div class="project-card-image">
-          <img src="img/proyek_all_telkom.svg" alt="INDIPRO TELKOM SURABAYA" />
-        </div>
-        <div class="project-card-body">
-          <div class="project-card-badge project-badge-softdev">Software Development</div>
-          <div class="project-card-title">INDIPRO TELKOM SURABAYA</div>
-          <div class="project-card-desc">Effortless online booking experience for home internet installation, enriched with advanced GIS features.</div>
-        </div>
-      </div>
-
-      <div class="project-card" data-filter="all software-development">
-        <div class="project-card-image">
           <img src="img/proyek_all_wika.svg" alt="QPS WIKA GEDUNG" />
         </div>
         <div class="project-card-body">
@@ -584,6 +694,7 @@
         </div>
       </div>
 
+      <!-- ===== SOFTWARE DEVELOPMENT exclusive ===== -->
       <div class="project-card" data-filter="software-development" style="display:none">
         <div class="project-card-image">
           <img src="img/proyek_softdev_silly.svg" alt="SILY" />
@@ -626,6 +737,17 @@
           <div class="project-card-badge project-badge-digital">Digital Branding</div>
           <div class="project-card-title">Aerial Video Company Profile PT JMF</div>
           <div class="project-card-desc">Crafting an engaging aerial company profile video for PT JMF, showcasing their expertise and services from a captivating perspective.</div>
+        </div>
+      </div>
+
+      <div class="project-card" data-filter="digital-branding" style="display:none">
+        <div class="project-card-image">
+          <img src="img/proyek_all_kana.jpg" alt="KANA STAR Summit" />
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-badge project-badge-digital">Digital Branding</div>
+          <div class="project-card-title">Agritech Bamboo App & Video Showcase – STAR Summit 2026</div>
+          <div class="project-card-desc">Showcasing Kana’s bamboo agritech innovation through a mock-up app and video presentation at STAR Summit 2026.</div>
         </div>
       </div>
 
@@ -853,7 +975,91 @@
   <!-- <img class="tower" src="img/to" /> -->
 </div>
 
+<button type="button" class="global-scroll-top-btn" aria-label="Back to top"><span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span></button>
+
 <script>
+(function () {
+  var trigger = document.getElementById('solutions-trigger');
+  var menu = document.getElementById('solutions-mega-menu');
+  var closeTimer = null;
+
+  if (!trigger || !menu) {
+    return;
+  }
+
+  function isOpen() {
+    return menu.classList.contains('is-open');
+  }
+
+  function openMenu() {
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+    menu.classList.add('is-open');
+    trigger.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    trigger.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+  }
+
+  function scheduleClose() {
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+    }
+    closeTimer = setTimeout(closeMenu, 120);
+  }
+
+  trigger.addEventListener('click', function (event) {
+    event.stopPropagation();
+    if (isOpen()) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  trigger.addEventListener('mouseenter', openMenu);
+  trigger.addEventListener('mouseleave', scheduleClose);
+  menu.addEventListener('mouseenter', openMenu);
+  menu.addEventListener('mouseleave', scheduleClose);
+
+  trigger.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      if (isOpen()) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      closeMenu();
+      trigger.blur();
+    }
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && isOpen()) {
+      closeMenu();
+    }
+  });
+})();
+
 (function () {
   var filterBtns = document.querySelectorAll('.btn-filter');
   var projectCards = document.querySelectorAll('.project-card');
@@ -1243,6 +1449,7 @@
 
       if (followLabels[0]) { followLabels[0].textContent = 'Instagram'; }
       if (followLabels[1]) { followLabels[1].textContent = 'LinkedIn'; }
+      if (followLabels[2]) { followLabels[2].textContent = 'WhatsApp'; }
     } else {
       if (footerHeadings[0]) { footerHeadings[0].textContent = 'Company'; }
       if (footerHeadings[1]) { footerHeadings[1].textContent = 'Contact Us'; }
@@ -1255,6 +1462,7 @@
 
       if (followLabels[0]) { followLabels[0].textContent = 'Instagram'; }
       if (followLabels[1]) { followLabels[1].textContent = 'LinkedIn'; }
+      if (followLabels[2]) { followLabels[2].textContent = 'WhatsApp'; }
     }
 
     setLanguageButtonState(lang);
@@ -1287,6 +1495,26 @@
   var storedLanguage = localStorage.getItem('hexavara-lang');
   applyLanguage(storedLanguage === 'id' ? 'id' : 'en');
 })();
+
+(function () {
+  var startProjectBtn = document.querySelector('.start-a-project');
+  var consultBtn = document.querySelector('.consult-now2');
+
+  if (startProjectBtn) {
+    startProjectBtn.style.cursor = 'pointer';
+    startProjectBtn.addEventListener('click', function () {
+      window.location.href = 'cta.html';
+    });
+  }
+
+  if (consultBtn) {
+    consultBtn.style.cursor = 'pointer';
+    consultBtn.addEventListener('click', function () {
+      window.location.href = 'cta.html';
+    });
+  }
+})();
 </script>
+<script src="js/scroll_top.js"></script>
   </body>
 </html>

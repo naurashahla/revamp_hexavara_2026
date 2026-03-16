@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexavara - Services</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48"
+    />
     <link rel="stylesheet" href="css/clients.css" />
+    <link rel="stylesheet" href="css/scroll_top.css" />
   </head>
   <body>
     <div class="clients-page service-page">
@@ -21,15 +26,57 @@
           <a class="nav-link" href="index.html#works">Works</a>
           <a class="nav-link" href="about_us.html">About Us</a>
           <a class="nav-link" href="index.html#services">Services</a>
-          <a class="nav-link" href="index.html#solutions">Solutions</a>
+          <button
+            class="nav-link nav-solutions-trigger"
+            id="solutions-trigger"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="solutions-mega-menu"
+          >
+            Solutions
+          </button>
         </nav>
+
+        <div class="solutions-mega-menu" id="solutions-mega-menu" aria-hidden="true">
+          <div class="solutions-mega-menu-inner">
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Service</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><span>Enterprise Resource Planning</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>Customer Relationship Management</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">query_stats</span><span>Business Intelligence &amp; Analytics</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">cloud_sync</span><span>Cloud Migration &amp; Strategy</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span><span>Cybersecurity &amp; Compliance</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Industry</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>Consumer Goods</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">monitor_heart</span><span>Healthcare</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">conveyor_belt</span><span>Supply Chain</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Ready to Use Platform</h3>
+              <div class="solutions-platform-list">
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-teal"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span></div><div><p class="solutions-platform-name">Crowdfunding</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-red"><span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span></div><div><p class="solutions-platform-name">Corporate Budgeting</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-orange"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div><div><p class="solutions-platform-name">E-Commerce</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-green"><span class="material-symbols-outlined" aria-hidden="true">event</span></div><div><p class="solutions-platform-name">Event Management</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-blue"><span class="material-symbols-outlined" aria-hidden="true">storefront</span></div><div><p class="solutions-platform-name">Multi-Merchant</p><p class="solutions-platform-meta">Platform</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="header-actions">
           <div class="language-switch" aria-label="Language switcher">
-            <button type="button" class="lang-button active">EN</button>
-            <button type="button" class="lang-button">ID</button>
+            <button type="button" class="lang-button active" id="lang-en-btn" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" id="lang-id-btn" aria-pressed="false">ID</button>
           </div>
-          <a class="header-cta" href="#consult">Start a Project?</a>
+          <a class="header-cta" href="cta.html">Start a Project?</a>
         </div>
       </header>
 
@@ -46,7 +93,7 @@
               Professional software solutions tailored to your business needs. We bridge the gap between
               vision and reality with high-end engineering and strategic innovation.
             </p>
-            <a class="service-hero-button" href="#consult">Consult Now</a>
+            <a class="service-hero-button" href="cta.html">Consult Now</a>
           </div>
         </section>
 
@@ -320,7 +367,7 @@
               Discuss your IT challenges, and our team of experienced experts will
               provide tailored solutions to drive your business growth and success.
             </div>
-            <a class="cta-button" href="mailto:info@hexavara.com">Consult Now</a>
+            <a class="cta-button" href="cta.html">Consult Now</a>
           </div>
         </section>
       </main>
@@ -367,6 +414,7 @@
                 <div class="footer-social-links">
                   <a class="footer-social-link" href="https://www.instagram.com/hexavara/" target="_blank" rel="noopener noreferrer">Instagram</a>
                   <a class="footer-social-link" href="https://www.linkedin.com/company/hexavara-technology/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a class="footer-social-link" href="https://api.whatsapp.com/send?phone=628113451550" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -380,7 +428,412 @@
       </footer>
     </div>
 
+    <button type="button" class="global-scroll-top-btn" aria-label="Back to top"><span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span></button>
+
     <script>
+      (function () {
+        var trigger = document.getElementById('solutions-trigger');
+        var menu = document.getElementById('solutions-mega-menu');
+        var closeTimer = null;
+
+        if (!trigger || !menu) {
+          return;
+        }
+
+        function isOpen() {
+          return menu.classList.contains('is-open');
+        }
+
+        function openMenu() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+            closeTimer = null;
+          }
+          menu.classList.add('is-open');
+          trigger.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          menu.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+          menu.classList.remove('is-open');
+          trigger.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        }
+
+        function scheduleClose() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+          }
+          closeTimer = setTimeout(closeMenu, 120);
+        }
+
+        trigger.addEventListener('click', function (event) {
+          event.stopPropagation();
+          if (isOpen()) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        trigger.addEventListener('mouseenter', openMenu);
+        trigger.addEventListener('mouseleave', scheduleClose);
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', scheduleClose);
+
+        trigger.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (isOpen()) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          }
+
+          if (event.key === 'Escape') {
+            closeMenu();
+            trigger.blur();
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && isOpen()) {
+            closeMenu();
+          }
+        });
+      })();
+
+      (function () {
+        var enBtn = document.getElementById('lang-en-btn');
+        var idBtn = document.getElementById('lang-id-btn');
+
+        if (!enBtn || !idBtn) {
+          return;
+        }
+
+        var translations = {
+          en: {
+            title: 'Hexavara - Services',
+            nav: ['Works', 'About Us', 'Services', 'Solutions'],
+            solutionsTitles: ['Solution by Service', 'Solution by Industry', 'Ready to Use Platform'],
+            solutionsLinks: [
+              'Enterprise Resource Planning',
+              'Customer Relationship Management',
+              'Business Intelligence & Analytics',
+              'Cloud Migration & Strategy',
+              'Cybersecurity & Compliance',
+              'Consumer Goods',
+              'Healthcare',
+              'Supply Chain'
+            ],
+            platformNames: ['Crowdfunding', 'Corporate Budgeting', 'E-Commerce', 'Event Management', 'Multi-Merchant'],
+            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
+            headerCta: 'Start a Project?',
+            heroTitle: 'Transforming Ideas into<br />\n              <span class="service-hero-accent">Digital Excellence</span>',
+            heroDescription: 'Professional software solutions tailored to your business needs. We bridge the gap between vision and reality with high-end engineering and strategic innovation.',
+            heroButton: 'Consult Now',
+            stats: ['Happy Clients', 'Projects Delivered', 'Client Retention'],
+            offeringsTitle: 'Our Services',
+            offeringTitles: ['Software Development', 'Startup & Incubator', 'Managed Services'],
+            offeringDescriptions: [
+              'Elevate your digital presence with our software development services. We specialize in crafting bespoke solutions to your business needs, ensuring seamless functionality and user-centric experiences. Our expert team employs the latest technologies to deliver scalable, high-performance software that propels your business forward.',
+              'Navigate the complexities of startup success with our expert consultancy services. From ideation to execution, we offer strategic guidance to optimize your business model. With bunch of investor partner behind us we will help to accelerate growth of your startup. Make a collaboration with us to turn your entrepreneurial vision into reality.',
+              'Optimize your IT infrastructure with our comprehensive managed services. We provide comprehensive solutions, including proactive system monitoring, and strategic IT planning. Trust us to optimize your technology segment, ensuring most effective operations and allowing you to stay ahead in the digital landscape.'
+            ],
+            offeringLists: [
+              'Web Development', 'Mobile Apps Development', 'Geographical Information System', 'Internet of Things', 'Enterprise Resource Planning', 'Backoffice Management Services (Accounting, HRD, HSE, etc)',
+              'Coaching', 'Investment', 'Fundraising', 'Seed & Development', 'Partnership',
+              'IT Outsourcing', 'Maintenance', 'Data Migration', 'Configuration', 'Training', 'Gap Analysis', 'IT Consultant'
+            ],
+            learnMore: 'Learn More',
+            additionalTitle: 'Additional Services',
+            additionalDescription: 'Comprehensive support for every aspect of your business growth.',
+            additionalTitles: ['Digital Branding', 'Advertising', 'UI/UX Design', 'Business Consultant', 'Accounting Consultant', 'HR Consultant'],
+            additionalTexts: [
+              'Building strong digital identities that resonate with your target audience.',
+              'Data-driven marketing strategies to maximize your ROI and reach.',
+              'Creating intuitive and visually stunning interfaces for better engagement.',
+              'Strategic advisory to optimize business processes and scalability.',
+              'Professional financial management and reporting for your tech assets.',
+              'Talent acquisition and management strategies for digital-first teams.'
+            ],
+            valueKicker: 'Our Value',
+            valueTitle: 'Why Choose Hexavara',
+            valueDescription: 'Excellence in Project Execution, Strategic Oversight, Trusted Technology Partner.',
+            valueTitles: ['Roadmap for Timeline', 'Weekly Sprint Monitoring', 'Maximum Service', 'Monitor Team Performance'],
+            valueTexts: [
+              'Our roadmap contains a detailed list of tasks and project timelines that you can monitor at any time. Each roadmap is created based on mutual agreement.',
+              'This feature helps control sprints, ensuring our programmers work according to the time you’ve purchased. It also guarantees that your project is success.',
+              'We guarantee maximum service with bug fixes and improvements handled within 48 hours. This feature allows you to easily track your requests.',
+              'Each of our talents has daily and monthly targets aligned with the time you’ve purchased. They compete to deliver their best performance.'
+            ],
+            ctaBadge: 'Ready to Get Started?',
+            ctaHeading: 'Get the Right IT Solutions from the<br />\n              <span class="cta-blue">Best IT Vendor</span> - Consult with Us Today!',
+            ctaDescription: 'Discuss your IT challenges, and our team of experienced experts will provide tailored solutions to drive your business growth and success.',
+            ctaButton: 'Consult Now',
+            footerBrandTag: 'Software Development and IT Consulting',
+            footerHeadings: ['Company', 'Contact Us', 'Follow Us'],
+            footerLinks: ['Works', 'About Us', 'Services', 'Solutions'],
+            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
+            footerCopyright: '© 2026 Hexavara Tech. All rights reserved.'
+          },
+          id: {
+            title: 'Hexavara - Layanan',
+            nav: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
+            solutionsTitles: ['Solusi Berdasarkan Layanan', 'Solusi Berdasarkan Industri', 'Platform Siap Pakai'],
+            solutionsLinks: [
+              'Perencanaan Sumber Daya Perusahaan (ERP)',
+              'Manajemen Hubungan Pelanggan (CRM)',
+              'Business Intelligence & Analitik',
+              'Migrasi & Strategi Cloud',
+              'Keamanan Siber & Kepatuhan',
+              'Barang Konsumsi',
+              'Kesehatan',
+              'Rantai Pasok'
+            ],
+            platformNames: ['Crowdfunding', 'Anggaran Perusahaan', 'E-Commerce', 'Manajemen Acara', 'Multi-Merchant'],
+            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
+            headerCta: 'Mulai Proyek?',
+            heroTitle: 'Mengubah Ide Menjadi<br />\n              <span class="service-hero-accent">Keunggulan Digital</span>',
+            heroDescription: 'Solusi software profesional yang dirancang sesuai kebutuhan bisnis Anda. Kami menjembatani visi dan eksekusi melalui rekayasa yang kuat dan inovasi strategis.',
+            heroButton: 'Konsultasi Sekarang',
+            stats: ['Klien Puas', 'Proyek Terselesaikan', 'Retensi Klien'],
+            offeringsTitle: 'Layanan Kami',
+            offeringTitles: ['Pengembangan Software', 'Startup & Inkubator', 'Layanan Terkelola'],
+            offeringDescriptions: [
+              'Perkuat kehadiran digital Anda melalui layanan pengembangan software kami. Kami merancang solusi yang sesuai kebutuhan bisnis agar fungsional, stabil, dan nyaman digunakan. Tim kami memanfaatkan teknologi terbaru untuk menghadirkan software yang skalabel dan berkinerja tinggi.',
+              'Jalankan pertumbuhan startup Anda dengan pendampingan ahli dari tahap ide hingga eksekusi. Kami memberikan arahan strategis untuk mengoptimalkan model bisnis. Didukung jaringan mitra investor, kami membantu mempercepat pertumbuhan startup Anda.',
+              'Optimalkan infrastruktur TI Anda melalui layanan terkelola yang menyeluruh. Kami menyediakan monitoring proaktif, dukungan operasional, dan perencanaan TI strategis agar sistem berjalan efektif dan bisnis Anda tetap fokus bertumbuh.'
+            ],
+            offeringLists: [
+              'Pengembangan Web', 'Pengembangan Aplikasi Mobile', 'Sistem Informasi Geografis', 'Internet of Things (IoT)', 'Enterprise Resource Planning (ERP)', 'Layanan Manajemen Back Office (Akuntansi, HRD, HSE, dll.)',
+              'Pendampingan', 'Investasi', 'Penggalangan Dana', 'Pendanaan Awal & Pengembangan', 'Kemitraan',
+              'Outsourcing TI', 'Pemeliharaan', 'Migrasi Data', 'Konfigurasi', 'Pelatihan', 'Analisis Kesenjangan', 'Konsultan TI'
+            ],
+            learnMore: 'Pelajari Lebih Lanjut',
+            additionalTitle: 'Layanan Tambahan',
+            additionalDescription: 'Dukungan lengkap untuk setiap aspek pertumbuhan bisnis Anda.',
+            additionalTitles: ['Branding Digital', 'Periklanan', 'Desain UI/UX', 'Konsultan Bisnis', 'Konsultan Akuntansi', 'Konsultan SDM'],
+            additionalTexts: [
+              'Membangun identitas digital yang kuat dan relevan dengan target audiens Anda.',
+              'Strategi pemasaran berbasis data untuk memaksimalkan jangkauan dan hasil investasi Anda.',
+              'Merancang antarmuka yang intuitif dan menarik untuk meningkatkan keterlibatan pengguna.',
+              'Pendampingan strategis untuk mengoptimalkan proses bisnis dan skalabilitas perusahaan.',
+              'Pengelolaan dan pelaporan keuangan profesional untuk mendukung aset teknologi Anda.',
+              'Strategi rekrutmen dan pengelolaan talenta untuk tim digital yang adaptif.'
+            ],
+            valueKicker: 'Nilai Kami',
+            valueTitle: 'Mengapa Memilih Hexavara',
+            valueDescription: 'Eksekusi Proyek Unggul, Pengawasan Strategis, Mitra Teknologi Andal.',
+            valueTitles: ['Roadmap Timeline', 'Monitoring Sprint Mingguan', 'Layanan Maksimal', 'Pantau Performa Tim'],
+            valueTexts: [
+              'Roadmap kami memuat daftar tugas dan timeline proyek yang jelas agar mudah dipantau kapan saja. Setiap roadmap disusun berdasarkan kesepakatan bersama.',
+              'Fitur ini membantu mengontrol sprint agar tim bekerja sesuai alokasi waktu proyek. Hasilnya lebih terarah dan target proyek lebih terjaga.',
+              'Kami menjamin layanan maksimal. Perbaikan bug dan peningkatan ditangani dalam 48 jam sehingga setiap permintaan dapat Anda pantau dengan mudah.',
+              'Setiap talenta memiliki target harian dan bulanan yang selaras dengan kebutuhan proyek. Tim kami fokus memberikan performa terbaik di setiap tahap.'
+            ],
+            ctaBadge: 'Siap Memulai?',
+            ctaHeading: 'Dapatkan Solusi IT yang Tepat dari<br />\n              <span class="cta-blue">Vendor IT Terbaik</span> - Konsultasi dengan Kami Hari Ini!',
+            ctaDescription: 'Diskusikan tantangan IT Anda, dan tim ahli kami akan memberikan solusi yang tepat untuk mendorong pertumbuhan dan keberhasilan bisnis Anda.',
+            ctaButton: 'Konsultasi Sekarang',
+            footerBrandTag: 'Pengembangan Software dan Konsultasi IT',
+            footerHeadings: ['Perusahaan', 'Kontak', 'Ikuti Kami'],
+            footerLinks: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
+            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
+            footerCopyright: '© 2026 Hexavara Tech. Seluruh hak cipta dilindungi.'
+          }
+        };
+
+        function setButtonState(lang) {
+          var isEnglish = lang === 'en';
+          enBtn.classList.toggle('active', isEnglish);
+          idBtn.classList.toggle('active', !isEnglish);
+          enBtn.setAttribute('aria-pressed', isEnglish ? 'true' : 'false');
+          idBtn.setAttribute('aria-pressed', isEnglish ? 'false' : 'true');
+        }
+
+        function applyLanguage(lang) {
+          var config = translations[lang] || translations.en;
+          var navLinks = document.querySelectorAll('.site-nav .nav-link');
+          var solutionsTitles = document.querySelectorAll('.solutions-mega-title');
+          var solutionsLinks = document.querySelectorAll('.solutions-mega-link > span:last-child');
+          var platformNames = document.querySelectorAll('.solutions-platform-name');
+          var platformMeta = document.querySelectorAll('.solutions-platform-meta');
+          var statTexts = document.querySelectorAll('.service-stat-text');
+          var offeringTitles = document.querySelectorAll('.service-card-title');
+          var offeringDescriptions = document.querySelectorAll('.service-card-description');
+          var serviceListItems = document.querySelectorAll('.service-card-list li');
+          var learnMoreLinks = document.querySelectorAll('.service-card-link');
+          var additionalTitles = document.querySelectorAll('.additional-service-card-title');
+          var additionalTexts = document.querySelectorAll('.additional-service-card-text');
+          var valueTitles = document.querySelectorAll('.service-value-card-title');
+          var valueTexts = document.querySelectorAll('.service-value-card-text');
+          var footerHeadings = document.querySelectorAll('.footer-heading');
+          var footerLinks = document.querySelectorAll('.footer-link');
+          var footerSocial = document.querySelectorAll('.footer-social-link');
+
+          document.title = config.title;
+          document.documentElement.setAttribute('lang', lang);
+
+          navLinks.forEach(function (item, index) {
+            if (config.nav[index]) {
+              item.textContent = config.nav[index];
+            }
+          });
+
+          solutionsTitles.forEach(function (item, index) {
+            if (config.solutionsTitles[index]) {
+              item.textContent = config.solutionsTitles[index];
+            }
+          });
+
+          solutionsLinks.forEach(function (item, index) {
+            if (config.solutionsLinks[index]) {
+              item.textContent = config.solutionsLinks[index];
+            }
+          });
+
+          platformNames.forEach(function (item, index) {
+            if (config.platformNames[index]) {
+              item.textContent = config.platformNames[index];
+            }
+          });
+
+          platformMeta.forEach(function (item, index) {
+            if (config.platformMeta[index]) {
+              item.textContent = config.platformMeta[index];
+            }
+          });
+
+          var headerCta = document.querySelector('.header-cta');
+          var heroTitle = document.querySelector('.service-hero-title');
+          var heroDescription = document.querySelector('.service-hero-description');
+          var heroButton = document.querySelector('.service-hero-button');
+          var offeringsTitle = document.querySelector('.service-offerings-title');
+          var additionalTitle = document.querySelector('.additional-services-title');
+          var additionalDescription = document.querySelector('.additional-services-description');
+          var valueKicker = document.querySelector('.service-value-kicker');
+          var valueTitle = document.querySelector('.service-value-title');
+          var valueDescription = document.querySelector('.service-value-description');
+          var ctaBadge = document.querySelector('.cta-badge-label');
+          var ctaHeading = document.querySelector('.cta-main-heading');
+          var ctaDescription = document.querySelector('.cta-description');
+          var ctaButton = document.querySelector('.cta-button');
+          var footerBrandTag = document.querySelector('.footer-brand-tag');
+          var footerCopyright = document.querySelector('.footer-copyright');
+
+          if (headerCta) { headerCta.textContent = config.headerCta; }
+          if (heroTitle) { heroTitle.innerHTML = config.heroTitle; }
+          if (heroDescription) { heroDescription.textContent = config.heroDescription; }
+          if (heroButton) { heroButton.textContent = config.heroButton; }
+          if (offeringsTitle) { offeringsTitle.textContent = config.offeringsTitle; }
+          if (additionalTitle) { additionalTitle.textContent = config.additionalTitle; }
+          if (additionalDescription) { additionalDescription.textContent = config.additionalDescription; }
+          if (valueKicker) { valueKicker.textContent = config.valueKicker; }
+          if (valueTitle) { valueTitle.textContent = config.valueTitle; }
+          if (valueDescription) { valueDescription.textContent = config.valueDescription; }
+          if (ctaBadge) { ctaBadge.textContent = config.ctaBadge; }
+          if (ctaHeading) { ctaHeading.innerHTML = config.ctaHeading; }
+          if (ctaDescription) { ctaDescription.textContent = config.ctaDescription; }
+          if (ctaButton) { ctaButton.textContent = config.ctaButton; }
+          if (footerBrandTag) { footerBrandTag.textContent = config.footerBrandTag; }
+          if (footerCopyright) { footerCopyright.textContent = config.footerCopyright; }
+
+          statTexts.forEach(function (item, index) {
+            if (config.stats[index]) {
+              item.textContent = config.stats[index];
+            }
+          });
+
+          offeringTitles.forEach(function (item, index) {
+            if (config.offeringTitles[index]) {
+              item.textContent = config.offeringTitles[index];
+            }
+          });
+
+          offeringDescriptions.forEach(function (item, index) {
+            if (config.offeringDescriptions[index]) {
+              item.textContent = config.offeringDescriptions[index];
+            }
+          });
+
+          serviceListItems.forEach(function (item, index) {
+            if (config.offeringLists[index]) {
+              item.textContent = config.offeringLists[index];
+            }
+          });
+
+          learnMoreLinks.forEach(function (item) {
+            item.textContent = config.learnMore;
+          });
+
+          additionalTitles.forEach(function (item, index) {
+            if (config.additionalTitles[index]) {
+              item.textContent = config.additionalTitles[index];
+            }
+          });
+
+          additionalTexts.forEach(function (item, index) {
+            if (config.additionalTexts[index]) {
+              item.textContent = config.additionalTexts[index];
+            }
+          });
+
+          valueTitles.forEach(function (item, index) {
+            if (config.valueTitles[index]) {
+              item.textContent = config.valueTitles[index];
+            }
+          });
+
+          valueTexts.forEach(function (item, index) {
+            if (config.valueTexts[index]) {
+              item.textContent = config.valueTexts[index];
+            }
+          });
+
+          footerHeadings.forEach(function (item, index) {
+            if (config.footerHeadings[index]) {
+              item.textContent = config.footerHeadings[index];
+            }
+          });
+
+          footerLinks.forEach(function (item, index) {
+            if (config.footerLinks[index]) {
+              item.textContent = config.footerLinks[index];
+            }
+          });
+
+          footerSocial.forEach(function (item, index) {
+            if (config.footerSocial[index]) {
+              item.textContent = config.footerSocial[index];
+            }
+          });
+
+          setButtonState(lang);
+          localStorage.setItem('hexavara-lang', lang);
+        }
+
+        enBtn.addEventListener('click', function () {
+          applyLanguage('en');
+        });
+
+        idBtn.addEventListener('click', function () {
+          applyLanguage('id');
+        });
+
+        var storedLanguage = localStorage.getItem('hexavara-lang');
+        applyLanguage(storedLanguage === 'id' ? 'id' : 'en');
+      })();
+
       (function () {
         var chips = document.querySelectorAll('.category-chip');
         var cards = document.querySelectorAll('.category-card');
@@ -411,5 +864,6 @@
         });
       })();
     </script>
+    <script src="js/scroll_top.js"></script>
   </body>
 </html>
