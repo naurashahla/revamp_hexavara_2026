@@ -310,36 +310,34 @@ body {
   min-height: 583px;
   height: 583px;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   padding: 0;
   overflow: hidden;
 }
 
 .container49 {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 1280px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .container50 {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 24px;
   align-items: flex-start;
   justify-content: flex-start;
   width: 763px;
   max-width: 763px;
-  padding: 124px 0 0 58px;
-  flex: none;
+  position: absolute;
+  left: calc(50% - 582px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
 }
 
 .overlay2 {
@@ -365,10 +363,12 @@ body {
 }
 
 .hi-we-are-hexavara-tech {
-  font-family: "Inter-Black", sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  color: #0f172a;
 }
 
 .hi-we-are-hexavara-tech-span {
@@ -387,11 +387,11 @@ body {
 
 .founded-in-2013-by-its-students-hexavara-has-grown-from-an-academic-dream-into-a-powerhouse-of-digital-innovation-our-journey-began-with-a-shared-passion-for-technology-and-a-vision-to-transform-the-digital-landscape {
   color: #475569;
-  font-family: "InriaSans-Regular", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
-  line-height: 29.25px;
+  line-height: 1.65;
   font-weight: 400;
-  width: 574.31px;
+  width: 100%;
   min-height: 88px;
 }
 
@@ -412,9 +412,9 @@ body {
 
 .consult-now2 {
   color: #ffffff;
-  font-family: "Inter-ExtraBold", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
   padding: 14px 32px;
   background: #111827;
   border-radius: 14px;
@@ -423,6 +423,7 @@ body {
   gap: 8px;
   cursor: pointer;
   white-space: nowrap;
+  margin-top: 12px;
 }
 
 .container55 {
@@ -432,10 +433,24 @@ body {
 }
 
 .container53 {
-  flex: 1;
-  position: relative;
-  display: none;
-  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.hero-about-visual {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: right center;
+  display: block;
 }
 
 .overlay-shadow2 {
@@ -2150,17 +2165,19 @@ body {
   }
 
   .container49 {
-    flex-direction: column;
-    gap: 48px;
     width: 100%;
     height: auto;
   }
 
   .container50,
   .container53 {
-    flex: none;
+    position: relative;
     width: 100%;
     max-width: 100%;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
     padding: 0;
   }
 
@@ -2183,14 +2200,15 @@ body {
     translate: none;
   }
 
-  .overlay-shadow2 {
-    max-width: 600px;
+  .container50 {
+    width: min(100%, 640px);
+    max-width: 640px;
     margin: 0 auto;
   }
 
-  .background-border {
-    left: 0;
-    bottom: -20px;
+  .container53 {
+    height: 420px;
+    margin-top: 36px;
   }
 
   .the-dedicated-squad-section {
@@ -2247,11 +2265,7 @@ body {
   .hero-section {
     min-height: auto;
     height: auto;
-    padding: 60px 20px 60px;
-  }
-
-  .container49 {
-    gap: 32px;
+    padding: 56px 20px 48px;
   }
 
   .container50,
@@ -2260,16 +2274,19 @@ body {
     max-width: 100%;
   }
 
+  .container50 {
+    left: auto;
+    width: 100%;
+  }
+
   .hi-we-are-hexavara-tech {
     font-size: clamp(36px, 9vw, 40px);
     line-height: 1.15;
   }
 
-  .background-border {
-    position: static;
-    margin-top: 16px;
-    left: auto;
-    bottom: auto;
+  .container53 {
+    height: 300px;
+    margin-top: 28px;
   }
 
   .container5 {

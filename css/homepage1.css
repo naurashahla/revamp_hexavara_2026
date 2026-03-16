@@ -1,6 +1,6 @@
 :root {
   --design-width: 1280;
-  --design-height: 6830;
+  --design-height: 6670;
 }
 
 html,
@@ -50,7 +50,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50% 0;
-  top: 5321px;
+  top: 5161px;
 }
 .rectangle-27 {
   background: #f5f6f8;
@@ -122,10 +122,11 @@ body {
   line-height: 20px;
   font-weight: 500;
   position: absolute;
-  left: 537px;
+  left: 522px;
   top: 42px;
-  width: 81px;
+  width: 112px;
   height: 20px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,10 +149,11 @@ body {
   line-height: 20px;
   font-weight: 500;
   position: absolute;
-  left: 651px;
+  left: 654px;
   top: 42px;
-  width: 81px;
+  width: 112px;
   height: 20px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,10 +166,11 @@ body {
   line-height: 20px;
   font-weight: 500;
   position: absolute;
-  left: 765px;
+  left: 786px;
   top: 42px;
-  width: 81px;
+  width: 112px;
   height: 20px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,24 +183,25 @@ body {
   line-height: 20px;
   font-weight: 500;
   position: absolute;
-  left: 423px;
+  left: 390px;
   top: 42px;
-  width: 81px;
+  width: 112px;
   height: 20px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .transforming-ideas-into-digital-excellence {
   text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 0undefined;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
   font-weight: 700;
   position: absolute;
   left: 58px;
-  top: 227px;
+  top: 206px;
   width: 763px;
   display: flex;
   align-items: center;
@@ -221,13 +225,13 @@ body {
 .enhance-your-business-capabilities-to-innovate-and-compete-in-today-s-dynamic-market-by-harnessing-the-power-of-data {
   color: #475569;
   text-align: left;
-  font-family: "InriaSans-Regular", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
-  line-height: 29.25px;
+  line-height: 1.65;
   font-weight: 400;
   position: absolute;
   left: 58px;
-  top: 404px;
+  top: 424px;
   width: 574.31px;
   height: 88px;
   display: flex;
@@ -241,8 +245,9 @@ body {
   gap: 0px;
   align-items: center;
   justify-content: flex-start;
-  height: 72px;
-  max-width: 768px;
+  height: auto;
+  width: 960px;
+  max-width: 960px;
   position: absolute;
   left: 50%;
   translate: -50%;
@@ -255,17 +260,18 @@ body {
   line-height: 36px;
   font-weight: 500;
   position: relative;
-  width: 888px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 72px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .we-have-collaborated-with-50-client-partners-from-big-company-and-foundation-all-over-indonesia-span {
   color: #1e293b;
 }
 .we-have-collaborated-with-50-client-partners-from-big-company-and-foundation-all-over-indonesia-span2 {
   color: #0c5bed;
+  white-space: nowrap;
 }
 .background {
   background: #0c5bed;
@@ -522,6 +528,7 @@ body {
   position: relative;
   width: auto;
   height: auto;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -836,7 +843,8 @@ body {
   font-weight: 400;
   position: relative;
   width: 597px;
-  height: 34px;
+  min-height: 34px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1052,7 +1060,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 5424px;
+  top: 5264px;
   width: 386.86px;
   height: 40px;
   display: flex;
@@ -1069,7 +1077,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 5480px;
+  top: 5320px;
   width: 400px;
   height: 28px;
   display: flex;
@@ -1086,7 +1094,7 @@ body {
   position: absolute;
   right: 83px;
   left: 85px;
-  top: 5570px;
+  top: 5410px;
 }
 .testimonial-1 {
   background: #ffffff;
@@ -1532,7 +1540,7 @@ body {
   left: 50%;
   translate: -50% 0;
   right: auto;
-  top: 6058px;
+  top: 5898px;
   overflow: hidden;
 }
 .section::before {
@@ -1929,6 +1937,7 @@ body {
   flex-shrink: 0;
   position: relative;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 .en {
   color: #0f172a;
@@ -1954,6 +1963,32 @@ body {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  cursor: pointer;
+}
+
+.lang-btn {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-btn-active {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.lang-btn:not(.lang-btn-active) {
+  background: transparent;
+  box-shadow: none;
+}
+
+.lang-btn:not(.lang-btn-active) .en,
+.lang-btn:not(.lang-btn-active) .id {
+  color: #6b7280;
+}
+
+.lang-btn-active .en,
+.lang-btn-active .id {
+  color: #0f172a;
 }
 .id {
   color: #6b7280;
@@ -2634,10 +2669,12 @@ body {
   line-height: 40px;
   font-weight: 700;
   position: absolute;
-  left: 398px;
+  left: 50%;
+  translate: -50%;
   top: 4630px;
-  width: 483px;
+  width: 560px;
   height: 40px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2646,11 +2683,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   position: absolute;
-  right: 347px;
-  left: 345px;
+  left: 50%;
+  translate: -50%;
+  width: 960px;
   top: 4691px;
 }
 .excellence-in-project-execution-strategic-oversight-trusted-technology-partner {
@@ -2661,11 +2699,13 @@ body {
   line-height: 150%;
   font-weight: 400;
   position: relative;
-  width: 618px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  min-height: 34px;
+  height: auto;
+  white-space: nowrap;
+  display: block;
+  margin: 0 auto;
 }
 .our-value {
   color: #9ca3af;
@@ -2904,6 +2944,30 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+/* Pull the section after Projects upward to tighten the vertical gap */
+.rectangle-19,
+.why-choose-hexavara,
+.container41,
+.our-value,
+.rectangle-28,
+.rectangle-29,
+.rectangle-30,
+.rectangle-31,
+.group-50,
+.image-82,
+.image-83,
+.image-84,
+.roadmap-for-timeline,
+.maximum-service,
+.weekly-sprint-monitoring,
+.monitor-team-performanc,
+.our-roadmap-contains-a-detailed-list-of-tasks-and-project-timelines-that-you-can-monitor-at-any-time-each-roadmap-is-created-based-on-mutual-agreement,
+.we-guarantee-maximum-service-with-bug-fixes-and-improvements-handled-within-48-hours-this-feature-allows-you-to-easily-track-your-requests,
+.this-feature-helps-control-sprints-ensuring-our-programmers-work-according-to-the-time-you-ve-purchased-it-also-guarantees-that-your-project-is-success,
+.each-of-our-talents-has-daily-and-monthly-targets-aligned-with-the-time-you-ve-purchased-they-compete-to-deliver-their-best-performance {
+  transform: translateY(-160px);
+}
 .icon {
   width: 25px;
   height: 20px;
@@ -2972,7 +3036,7 @@ body {
   left: 58px;
   width: 156px;
   height: 52px;
-  top: 515px;
+  top: 532px;
   z-index: 1;
 }
 .consult-now2 {
@@ -2984,7 +3048,7 @@ body {
   font-weight: 700;
   position: absolute;
   left: 58px;
-  top: 529px;
+  top: 546px;
   width: 156px;
   white-space: nowrap;
   height: 24px;
@@ -3025,7 +3089,9 @@ body {
   font-weight: 700;
   text-decoration: underline;
   position: relative;
-  width: 92px;
+  width: auto;
+  min-width: 92px;
+  white-space: nowrap;
   height: 24px;
   display: flex;
   align-items: center;
@@ -3046,8 +3112,10 @@ body {
   height: 48px;
   position: absolute;
   left: 64px;
-  top: calc(50% - 1636px);
+  top: 1828px;
   backdrop-filter: blur(2px);
+  cursor: pointer;
+  z-index: 5;
 }
 .button-shadow4 {
   background: rgba(255, 255, 255, 0);
@@ -3088,10 +3156,146 @@ body {
   height: 48px;
   position: absolute;
   left: 1216px;
-  top: calc(50% - 1582px);
-  transform-origin: 0 0;
-  transform: rotate(180deg) scale(1, 1);
+  top: 1828px;
+  transform: none;
   backdrop-filter: blur(2px);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.button,
+.button2,
+.button2-card3 {
+  white-space: nowrap;
+}
+
+.button7.is-disabled,
+.button8.is-disabled {
+  opacity: 0.45;
+}
+
+.product-slide-card {
+  transition: transform 420ms ease, opacity 320ms ease;
+  will-change: transform, opacity;
+}
+
+.rectangle-9-card3 {
+  background: #161b26;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 473px;
+  height: 428px;
+  position: absolute;
+  left: 1189px;
+  top: 1638px;
+}
+
+.container7-card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 382px;
+  max-width: 384px;
+  position: absolute;
+  left: 1233px;
+  top: 1768px;
+}
+
+.dummy-product-description {
+  color: #94a3b8;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  align-self: stretch;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.heading-5-card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 382px;
+  position: absolute;
+  left: 1233px;
+  top: 1725px;
+}
+
+.dummy-product-title {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  width: auto;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.overlay2-card3 {
+  background: rgba(12, 91, 237, 0.2);
+  border-radius: 9999px;
+  padding: 4px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 128px;
+  position: absolute;
+  left: 1233px;
+  top: 1683px;
+}
+
+.dummy-product-badge {
+  color: #0c5bed;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.background-border3 {
+  background: linear-gradient(135deg, rgba(12, 91, 237, 0.4) 0%, rgba(12, 91, 237, 0) 100%);
+  border-radius: 24px 0 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 0;
+  border-bottom: 0;
+  padding: 0 15.99px 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 307.98px;
+  height: 173.23px;
+  position: absolute;
+  left: 1354px;
+  top: 1893px;
+  aspect-ratio: 307.98 / 173.23;
+}
+
+.button2-card3 {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 1233px;
+  top: 1988px;
 }
 .container45 {
   display: flex;
@@ -3102,6 +3306,7 @@ body {
   flex-shrink: 0;
   height: auto;
   position: relative;
+  transform: rotate(180deg);
   overflow: visible;
 }
 .button9 {
@@ -3122,7 +3327,8 @@ body {
   line-height: 24px;
   font-weight: 700;
   position: relative;
-  width: 158px;
+  width: auto;
+  white-space: nowrap;
   height: 24px;
   display: flex;
   align-items: center;
@@ -3344,7 +3550,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  padding-bottom: 72px;
+  padding-bottom: 36px;
 }
 
 /* Override absolute positioning for elements inside the section */
@@ -3386,18 +3592,18 @@ body {
   left: auto !important;
   top: auto !important;
   translate: none !important;
-  margin-top: 56px;
+  margin-top: 44px;
   width: fit-content;
   max-width: 100%;
-  padding: 6px;
+  padding: 4px;
   justify-content: center;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(10px);
   cursor: default;
 }
 .projects-section .btn-filter {
-  min-height: 48px;
-  padding: 12px 22px;
+  min-height: 40px;
+  padding: 8px 16px;
   border-radius: 9999px;
   align-items: center;
   justify-content: center;
@@ -3410,6 +3616,8 @@ body {
   width: auto;
   height: auto;
   white-space: nowrap;
+  font-size: 14px;
+  line-height: 1;
 }
 /* Reset button10 default dark bg — manage purely via active-filter */
 .projects-section .button10 {
@@ -3438,16 +3646,16 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  width: 100%;
-  margin-top: 36px;
+  gap: 22px;
+  width: min(100%, 1080px);
+  margin-top: 28px;
   align-items: stretch;
 }
 
 /* Project card */
 .project-card {
   background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid #dbe3ef;
   display: flex;
@@ -3463,7 +3671,7 @@ body {
 }
 .project-card-image {
   width: 100%;
-  height: 224px;
+  height: 188px;
   overflow: hidden;
   background: linear-gradient(180deg, #eff6ff 0%, #e2e8f0 100%);
   display: flex;
@@ -3492,10 +3700,10 @@ body {
 
 /* Card body */
 .project-card-body {
-  padding: 22px 22px 24px;
+  padding: 18px 18px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   flex: 1;
 }
 .project-card-badge {
@@ -3517,7 +3725,7 @@ body {
 
 .project-card-title {
   font-family: "Inter-Bold", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #0f172a;
   line-height: 1.35;
@@ -3525,10 +3733,10 @@ body {
 }
 .project-card-desc {
   font-family: "Inter-Regular", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .projects-view-more {
@@ -3543,10 +3751,23 @@ body {
   font-size: 15px;
   line-height: 1;
   font-weight: 600;
+  white-space: nowrap;
   cursor: pointer;
   outline: none;
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
   transition: none;
+}
+
+body.lang-id .button-shadow3 {
+  width: 200px;
+}
+
+body.lang-id .consult-now2 {
+  width: 200px;
+}
+
+body.lang-id .container43 {
+  left: 255px;
 }
 
 .projects-view-more:hover {
@@ -3586,6 +3807,7 @@ body {
   }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 }
 @media (max-width: 600px) {
@@ -3609,6 +3831,6 @@ body {
     min-width: 140px;
   }
   .project-card-image {
-    height: 210px;
+    height: 180px;
   }
 }
