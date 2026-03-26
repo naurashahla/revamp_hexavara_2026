@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexavara - Software Development</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48"
+    />
+    <link rel="stylesheet" href="css/clients.css" />
+    <link rel="stylesheet" href="css/scroll_top.css" />
+    <style>
+      .detail-page .detail-kicker {
+        margin: 0;
+        color: #2563eb;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1.4px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .detail-page .detail-services-grid {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .detail-page .detail-service-meta {
+        margin: 0 0 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .detail-page .detail-service-number {
+        color: #2563eb;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      .detail-page .detail-service-emoji {
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      .detail-page .detail-approach-section {
+        width: 100%;
+        background: #ffffff;
+        padding: 72px 48px;
+      }
+
+      .detail-page .detail-approach-inner,
+      .detail-page .detail-stack-inner {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .detail-page .detail-approach-title,
+      .detail-page .detail-stack-title {
+        margin: 12px 0 0;
+        color: #0f172a;
+        font-size: 42px;
+        line-height: 1.12;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-approach-description,
+      .detail-page .detail-stack-description {
+        margin: 18px 0 0;
+        max-width: 860px;
+        color: #475569;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+
+      .detail-page .detail-approach-list {
+        margin-top: 32px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .detail-page .detail-approach-item {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        border: 1px solid #dbe3ef;
+        border-radius: 16px;
+        padding: 20px 22px;
+      }
+
+      .detail-page .detail-approach-step {
+        color: #2563eb;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-approach-item-title {
+        margin: 6px 0 0;
+        color: #0f172a;
+        font-size: 24px;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-approach-item-text {
+        margin: 10px 0 0;
+        color: #64748b;
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 500;
+      }
+
+      .detail-page .detail-approach-points {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: #64748b;
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 500;
+      }
+
+      .detail-page .detail-why-section {
+        width: 100%;
+        background: #0a192f;
+        padding: 96px 48px;
+      }
+
+      .detail-page .detail-why-inner,
+      .detail-page .detail-workflow-inner {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .detail-page .detail-why-kicker {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.56);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .detail-page .detail-why-title {
+        margin: 12px 0 0;
+        color: #ffffff;
+        font-size: 38px;
+        line-height: 1.12;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .detail-page .detail-why-grid {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+
+      @media (min-width: 768px) {
+        .detail-page .detail-why-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .detail-page .detail-why-card {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .detail-page .detail-why-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .detail-page .detail-why-icon .material-symbols-outlined {
+        color: #3b82f6;
+        font-size: 24px;
+      }
+
+      .detail-page .detail-why-card h3 {
+        margin: 16px 0 8px;
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .detail-page .detail-why-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 14px;
+        line-height: 1.6;
+        white-space: normal;
+      }
+
+      .detail-page .detail-workflow-section {
+        width: 100%;
+        background: #f5f6f8;
+        padding: 96px 48px;
+      }
+
+      .detail-page .detail-workflow-head {
+        text-align: center;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
+      .detail-page .detail-workflow-kicker {
+        margin: 0;
+        color: #2563eb;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1.8px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .detail-page .detail-workflow-title {
+        margin: 10px 0 0;
+        color: #0f172a;
+        font-size: 54px;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-workflow-description {
+        margin: 14px auto 0;
+        color: #64748b;
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 680px;
+      }
+
+      .detail-page .detail-workflow-timeline {
+        position: relative;
+        max-width: 980px;
+        margin: 56px auto 0;
+      }
+
+      .detail-page .detail-workflow-timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        transform: translateX(-50%);
+        background: #d9e1ea;
+      }
+
+      .detail-page .detail-workflow-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        margin-bottom: 42px;
+      }
+
+      .detail-page .detail-workflow-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .detail-page .detail-workflow-item.is-left {
+        flex-direction: row-reverse;
+      }
+
+      .detail-page .detail-workflow-col {
+        width: calc(50% - 34px);
+      }
+
+      .detail-page .detail-workflow-col-content {
+        display: flex;
+      }
+
+      .detail-page .detail-workflow-item.is-right .detail-workflow-col-content {
+        justify-content: flex-start;
+      }
+
+      .detail-page .detail-workflow-item.is-left .detail-workflow-col-content {
+        justify-content: flex-end;
+      }
+
+      .detail-page .detail-workflow-col-empty {
+        min-height: 1px;
+      }
+
+      .detail-page .detail-workflow-node {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 2px solid #2196f3;
+        background: #f5f6f8;
+        color: #1d77d6;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .detail-page .detail-workflow-card {
+        background: #ffffff;
+        border: 1px solid #e7edf4;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        width: fit-content;
+        max-width: 430px;
+      }
+
+      .detail-page .detail-workflow-card-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .detail-page .detail-workflow-card-head .material-symbols-outlined {
+        color: #2563eb;
+        font-size: 18px;
+      }
+
+      .detail-page .detail-workflow-card h3 {
+        margin: 0;
+        color: #0f172a;
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-workflow-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: 500;
+      }
+
+      .detail-page .detail-workflow-card ul li {
+        margin-bottom: 4px;
+      }
+
+      .detail-page .detail-workflow-card ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .detail-page .detail-stack-section {
+        width: 100%;
+        background: linear-gradient(180deg, #ffffff 0%, #eaf2ff 100%);
+        padding: 72px 48px;
+      }
+
+      .detail-page .detail-stack-chips {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .detail-page .detail-stack-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #dbe3ef;
+        border-radius: 999px;
+        background: #ffffff;
+        padding: 10px 16px;
+        color: #334155;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+
+      .detail-page .detail-hero-section {
+        width: 100%;
+        background: #f5f6f8;
+        min-height: 582px;
+        padding: 84px 20px 56px;
+      }
+
+      .detail-page .detail-hero-inner {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .detail-page .detail-hero-title {
+        margin: 0;
+        color: #0f172a;
+        font-size: 60px;
+        line-height: 1.08;
+        letter-spacing: -1.8px;
+        font-weight: 700;
+      }
+
+      .detail-page .detail-hero-description {
+        margin: 28px auto 0;
+        max-width: 980px;
+        color: #475569;
+        font-size: 18px;
+        line-height: 1.42;
+        font-weight: 400;
+      }
+
+      .detail-page .detail-hero-button {
+        margin-top: 40px;
+      }
+
+      .detail-page .detail-logo-marquee {
+        margin-top: 70px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .detail-page .service-offerings-section {
+        background: #ffffff;
+      }
+
+      .detail-page .detail-logo-track {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        animation: detailLogoMarquee 44s linear infinite;
+      }
+
+      .detail-page .detail-logo-set {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+        padding-right: 46px;
+      }
+
+      .detail-page .detail-logo-item {
+        flex: 0 0 auto;
+        height: 62px;
+        width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .detail-page .detail-logo-item img {
+        max-height: 62px;
+        max-width: 140px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: none;
+        opacity: 1;
+      }
+
+      @keyframes detailLogoMarquee {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .detail-page .detail-services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .detail-page .detail-why-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .detail-page .detail-workflow-title,
+        .detail-page .detail-why-title {
+          font-size: 36px;
+        }
+
+        .detail-page .detail-workflow-card h3 {
+          font-size: 18px;
+        }
+
+        .detail-page .detail-workflow-card ul,
+        .detail-page .detail-why-card p {
+          font-size: 13px;
+        }
+
+        .detail-page .detail-hero-title {
+          font-size: 56px;
+        }
+
+        .detail-page .detail-hero-description {
+          font-size: 18px;
+          max-width: 880px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .detail-page .detail-services-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .detail-page .detail-why-section,
+        .detail-page .detail-workflow-section {
+          padding: 56px 20px;
+        }
+
+        .detail-page .detail-why-grid {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 20px;
+        }
+
+        .detail-page .detail-why-title,
+        .detail-page .detail-workflow-title {
+          font-size: 36px;
+        }
+
+        .detail-page .detail-why-card h3 {
+          white-space: normal;
+          font-size: 20px;
+        }
+
+        .detail-page .detail-workflow-timeline {
+          margin-top: 34px;
+        }
+
+        .detail-page .detail-workflow-timeline::before {
+          left: 18px;
+          transform: none;
+        }
+
+        .detail-page .detail-workflow-card ul,
+        .detail-page .detail-why-card p {
+          font-size: 13px;
+        }
+
+        .detail-page .detail-workflow-item,
+        .detail-page .detail-workflow-item.is-left {
+          flex-direction: row;
+          gap: 12px;
+          margin-bottom: 22px;
+        }
+
+        .detail-page .detail-workflow-col {
+          width: 100%;
+        }
+
+        .detail-page .detail-workflow-col-content {
+          display: block;
+        }
+
+        .detail-page .detail-workflow-col-empty {
+          display: none;
+        }
+
+        .detail-page .detail-workflow-node {
+          width: 34px;
+          height: 34px;
+          font-size: 12px;
+          background: #ffffff;
+          flex-shrink: 0;
+        }
+
+        .detail-page .detail-workflow-card {
+          padding: 16px;
+          width: 100%;
+          max-width: none;
+        }
+
+        .detail-page .detail-workflow-card h3 {
+          font-size: 19px;
+        }
+
+        .detail-page .detail-approach-section,
+        .detail-page .detail-stack-section {
+          padding: 56px 20px;
+        }
+
+        .detail-page .detail-approach-title,
+        .detail-page .detail-stack-title {
+          font-size: 32px;
+        }
+
+        .detail-page .detail-hero-section {
+          min-height: auto;
+          padding: 62px 18px 34px;
+        }
+
+        .detail-page .detail-hero-title {
+          font-size: 40px;
+        }
+
+        .detail-page .detail-hero-description {
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 1.48;
+        }
+
+        .detail-page .detail-logo-set {
+          gap: 28px;
+          padding-right: 28px;
+        }
+
+        .detail-page .detail-logo-item {
+          width: 112px;
+          height: 52px;
+        }
+
+        .detail-page .detail-logo-item img {
+          max-width: 112px;
+          max-height: 52px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clients-page service-page detail-page">
+      <header class="site-header">
+        <a class="logo-home-link" href="index.html" aria-label="Go to homepage">
+          <img
+            class="site-logo"
+            src="img/ChatGPT Image 26 Feb 2026, 11.24.32.png"
+            alt="Hexavara logo"
+          />
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html#works">Works</a>
+          <a class="nav-link" href="about_us.html">About Us</a>
+          <a class="nav-link" href="service.html">Services</a>
+          <button
+            class="nav-link nav-solutions-trigger"
+            id="solutions-trigger"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="solutions-mega-menu"
+          >
+            Solutions
+          </button>
+        </nav>
+
+        <div class="solutions-mega-menu" id="solutions-mega-menu" aria-hidden="true">
+          <div class="solutions-mega-menu-inner">
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Service</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><span>Enterprise Resource Planning</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>Customer Relationship Management</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">query_stats</span><span>Business Intelligence &amp; Analytics</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">cloud_sync</span><span>Cloud Migration &amp; Strategy</span></a>
+                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span><span>Cybersecurity &amp; Compliance</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Solution by Industry</h3>
+              <div class="solutions-mega-list">
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>Consumer Goods</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">monitor_heart</span><span>Healthcare</span></a>
+                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">conveyor_belt</span><span>Supply Chain</span></a>
+              </div>
+            </div>
+            <div class="solutions-mega-column">
+              <h3 class="solutions-mega-title">Ready to Use Platform</h3>
+              <div class="solutions-platform-list">
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-teal"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span></div><div><p class="solutions-platform-name">Crowdfunding</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-red"><span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span></div><div><p class="solutions-platform-name">Corporate Budgeting</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-orange"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div><div><p class="solutions-platform-name">E-Commerce</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-green"><span class="material-symbols-outlined" aria-hidden="true">event</span></div><div><p class="solutions-platform-name">Event Management</p><p class="solutions-platform-meta">Platform</p></div></div>
+                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-blue"><span class="material-symbols-outlined" aria-hidden="true">storefront</span></div><div><p class="solutions-platform-name">Multi-Merchant</p><p class="solutions-platform-meta">Platform</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <div class="language-switch" aria-label="Language switcher">
+            <button type="button" class="lang-button active" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" aria-pressed="false">ID</button>
+          </div>
+          <a class="header-cta" href="cta.html">Start a Project?</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="detail-hero-section" aria-label="Software Development Hero">
+          <div class="detail-hero-inner">
+            <h1 class="detail-hero-title">Software Development</h1>
+            <p class="detail-hero-description">
+              Elevate your digital presence with our software development services. We specialize in crafting bespoke solutions to your business needs, ensuring seamless functionality and user-centric experiences. Our expert team employs the latest technologies to deliver scalable, high-performance software that propels your business forward.
+            </p>
+            <a class="service-hero-button detail-hero-button" href="cta.html">Consult Now</a>
+
+            <div class="detail-logo-marquee" aria-label="Trusted client logos">
+              <div class="detail-logo-track">
+                <div class="detail-logo-set">
+                  <div class="detail-logo-item"><img src="img/telkom.png" alt="Telkom" /></div>
+                  <div class="detail-logo-item"><img src="img/wika.png" alt="WIKA" /></div>
+                  <div class="detail-logo-item"><img src="img/berau_coal.png" alt="Berau Coal" /></div>
+                  <div class="detail-logo-item"><img src="img/PJB_logo.png" alt="PJB" /></div>
+                  <div class="detail-logo-item"><img src="img/unilever.png" alt="Unilever" /></div>
+                  <div class="detail-logo-item"><img src="img/zelltech_logo.png" alt="Zelltech" /></div>
+                  <div class="detail-logo-item"><img src="img/jmf.png" alt="JMF" /></div>
+                  <div class="detail-logo-item"><img src="img/bmt_muda.png" alt="BMT Muda" /></div>
+                  <div class="detail-logo-item"><img src="img/dianca_goods.png" alt="Dianca Goods" /></div>
+                  <div class="detail-logo-item"><img src="img/kana.png" alt="Kana" /></div>
+                  <div class="detail-logo-item"><img src="img/rs_soetomo.png" alt="RS Soetomo" /></div>
+                  <div class="detail-logo-item"><img src="img/lamongan.png" alt="Lamongan" /></div>
+                  <div class="detail-logo-item"><img src="img/pamekasan.png" alt="Pamekasan" /></div>
+                  <div class="detail-logo-item"><img src="img/banjarbaru.png" alt="Banjarbaru" /></div>
+                  <div class="detail-logo-item"><img src="img/kota_bengkulu.png" alt="Kota Bengkulu" /></div>
+                  <div class="detail-logo-item"><img src="img/prov_bengkulu.svg" alt="Provinsi Bengkulu" /></div>
+                  <div class="detail-logo-item"><img src="img/unair.png" alt="Universitas Airlangga" /></div>
+                  <div class="detail-logo-item"><img src="img/roudlotul_falah.png" alt="Roudlotul Falah" /></div>
+                  <div class="detail-logo-item"><img src="img/bkd_jatim.png" alt="BKD Jatim" /></div>
+                </div>
+                <div class="detail-logo-set" aria-hidden="true">
+                  <div class="detail-logo-item"><img src="img/telkom.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/wika.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/berau_coal.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/PJB_logo.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/unilever.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/zelltech_logo.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/jmf.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/bmt_muda.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/dianca_goods.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/kana.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/rs_soetomo.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/lamongan.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/pamekasan.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/banjarbaru.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/kota_bengkulu.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/prov_bengkulu.svg" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/unair.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/roudlotul_falah.png" alt="" /></div>
+                  <div class="detail-logo-item"><img src="img/bkd_jatim.png" alt="" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="service-offerings-section" aria-labelledby="service-offerings-title">
+          <div class="service-offerings-inner">
+            <div class="service-offerings-head">
+              <h2 class="service-offerings-title" id="service-offerings-title">Our Services</h2>
+              <div class="service-offerings-line"></div>
+            </div>
+
+            <div class="detail-services-grid">
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">01</span></div>
+                <h3 class="service-card-title">Web Development</h3>
+                <p class="service-card-description">
+                  From dynamic landing pages to complex enterprise web portals, we build fast, secure, and scalable web applications tailored to your brand and user needs. Our solutions are optimized for performance across all devices and browsers.
+                </p>
+              </article>
+
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">02</span></div>
+                <h3 class="service-card-title">Mobile Apps Development</h3>
+                <p class="service-card-description">
+                  We design and develop intuitive mobile applications for iOS and Android platforms. Whether native or cross-platform, our apps deliver smooth performance, rich UX, and deep integration with device features and third-party services.
+                </p>
+              </article>
+
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">03</span></div>
+                <h3 class="service-card-title">Geographical Information System</h3>
+                <p class="service-card-description">
+                  We develop powerful GIS applications that transform raw spatial data into actionable insights. Ideal for logistics, urban planning, agriculture, and resource management - enabling smarter, location-aware decision making.
+                </p>
+              </article>
+
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">04</span></div>
+                <h3 class="service-card-title">Internet of Things</h3>
+                <p class="service-card-description">
+                  Connect your physical world to intelligent software. We architect end-to-end IoT ecosystems - from embedded firmware and sensor networks to real-time dashboards and cloud infrastructure - enabling smart automation and monitoring.
+                </p>
+              </article>
+
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">05</span></div>
+                <h3 class="service-card-title">Enterprise Resource Planning</h3>
+                <p class="service-card-description">
+                  Unify your business operations with a custom ERP system that integrates procurement, inventory, finance, HR, and production into a single, streamlined platform - giving leadership full visibility and control over every process.
+                </p>
+              </article>
+
+              <article class="service-offering-card">
+                <div class="detail-service-meta"><span class="detail-service-number">06</span></div>
+                <h3 class="service-card-title">Backoffice Management Services</h3>
+                <p class="service-card-description">
+                  Digitize and automate your internal operations with dedicated modules for Accounting, Human Resource Development (HRD), and Health, Safety &amp; Environment (HSE) - streamlining compliance, payroll, audits, and reporting workflows.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-why-section" aria-labelledby="why-title">
+          <div class="detail-why-inner">
+            <p class="detail-why-kicker">Core Advantages</p>
+            <h2 class="detail-why-title" id="why-title">Why Choose Our Software Solutions?</h2>
+            <div class="detail-why-grid">
+              <article class="detail-why-card">
+                <div class="detail-why-icon"><span class="material-symbols-outlined" aria-hidden="true">open_with</span></div>
+                <h3>Scalable Infrastructure</h3>
+                <p>Architecture built to handle rapid growth and high user traffic without performance loss.</p>
+              </article>
+              <article class="detail-why-card">
+                <div class="detail-why-icon"><span class="material-symbols-outlined" aria-hidden="true">shield</span></div>
+                <h3>Secure &amp; Protected</h3>
+                <p>Multi-layered security protocols to safeguard your business and customer data.</p>
+              </article>
+              <article class="detail-why-card">
+                <div class="detail-why-icon"><span class="material-symbols-outlined" aria-hidden="true">lightbulb</span></div>
+                <h3>Continuous Innovation</h3>
+                <p>Access to the latest tech stacks and agile methodologies for modern solutions.</p>
+              </article>
+              <article class="detail-why-card">
+                <div class="detail-why-icon"><span class="material-symbols-outlined" aria-hidden="true">tune</span></div>
+                <h3>Fully Customizable</h3>
+                <p>Bespoke development tailored to your unique business logic and workflows.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-workflow-section" aria-labelledby="workflow-title">
+          <div class="detail-workflow-inner">
+            <div class="detail-workflow-head">
+              <p class="detail-workflow-kicker">Our Workflow</p>
+              <h2 class="detail-workflow-title" id="workflow-title">Our Development Process</h2>
+              <p class="detail-workflow-description">A structured approach to turning your vision into a high-performing digital reality.</p>
+            </div>
+
+            <div class="detail-workflow-timeline">
+              <article class="detail-workflow-item is-right">
+                <div class="detail-workflow-col detail-workflow-col-empty"></div>
+                <span class="detail-workflow-node">01</span>
+                <div class="detail-workflow-col detail-workflow-col-content">
+                  <div class="detail-workflow-card">
+                    <div class="detail-workflow-card-head">
+                      <h3>Requirement Gathering</h3>
+                      <span class="material-symbols-outlined" aria-hidden="true">assignment_ind</span>
+                    </div>
+                    <ul>
+                      <li>Collecting Problems</li>
+                      <li>Explore Of Current Solution</li>
+                      <li>Auditing Existing Solution</li>
+                    </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="detail-workflow-item is-left">
+                  <div class="detail-workflow-col detail-workflow-col-empty"></div>
+                  <span class="detail-workflow-node">02</span>
+                  <div class="detail-workflow-col detail-workflow-col-content">
+                    <div class="detail-workflow-card">
+                    <div class="detail-workflow-card-head">
+                      <h3>Problem Analysis</h3>
+                      <span class="material-symbols-outlined" aria-hidden="true">analytics</span>
+                    </div>
+                    <ul>
+                      <li>Define Problem Points</li>
+                      <li>Analyze Flow Problem</li>
+                      <li>Define Solution</li>
+                    </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="detail-workflow-item is-right">
+                  <div class="detail-workflow-col detail-workflow-col-empty"></div>
+                  <span class="detail-workflow-node">03</span>
+                  <div class="detail-workflow-col detail-workflow-col-content">
+                    <div class="detail-workflow-card">
+                    <div class="detail-workflow-card-head">
+                      <h3>Planning</h3>
+                      <span class="material-symbols-outlined" aria-hidden="true">architecture</span>
+                    </div>
+                    <ul>
+                      <li>Flow System &amp; Wireframing</li>
+                      <li>System Architecture Design</li>
+                      <li>Technology Stack Selection</li>
+                      <li>Rapid Prototyping</li>
+                    </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="detail-workflow-item is-left">
+                  <div class="detail-workflow-col detail-workflow-col-empty"></div>
+                  <span class="detail-workflow-node">04</span>
+                  <div class="detail-workflow-col detail-workflow-col-content">
+                    <div class="detail-workflow-card">
+                    <div class="detail-workflow-card-head">
+                      <h3>Developing</h3>
+                      <span class="material-symbols-outlined" aria-hidden="true">code</span>
+                    </div>
+                    <ul>
+                      <li>Agile Sprint Planning</li>
+                      <li>High-Quality Implementation</li>
+                      <li>Rigorous Usability Testing</li>
+                    </ul>
+                    </div>
+                  </div>
+                </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-stack-section" aria-labelledby="stack-title">
+          <div class="detail-stack-inner">
+            <p class="detail-kicker">Technology Stack</p>
+            <h2 class="detail-stack-title" id="stack-title">Built with industry-leading technologies</h2>
+            <div class="detail-stack-chips">
+              <span class="detail-stack-chip">React</span>
+              <span class="detail-stack-chip">Next.js</span>
+              <span class="detail-stack-chip">Vue.js</span>
+              <span class="detail-stack-chip">Flutter</span>
+              <span class="detail-stack-chip">React Native</span>
+              <span class="detail-stack-chip">Node.js</span>
+              <span class="detail-stack-chip">Python</span>
+              <span class="detail-stack-chip">Laravel</span>
+              <span class="detail-stack-chip">PostgreSQL</span>
+              <span class="detail-stack-chip">MongoDB</span>
+              <span class="detail-stack-chip">Docker</span>
+              <span class="detail-stack-chip">Kubernetes</span>
+              <span class="detail-stack-chip">AWS / GCP</span>
+              <span class="detail-stack-chip">QGIS / Mapbox</span>
+              <span class="detail-stack-chip">Arduino / Raspberry Pi</span>
+              <span class="detail-stack-chip">MQTT</span>
+              <span class="detail-stack-chip">Odoo / SAP</span>
+              <span class="detail-stack-chip">GraphQL</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div class="cta-full">
+            <div class="cta-badge-label">Ready to Build Something Extraordinary?</div>
+            <div class="cta-main-heading">Let's discuss your project and discover how we can bring your vision to life.</div>
+            <a class="cta-button" href="cta.html">Start a Project</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-simple">
+            <div class="footer-brand-panel">
+              <div class="footer-brand-top">
+                <img
+                  class="footer-logo"
+                  src="img/ChatGPT Image 26 Feb 2026, 11.24.32.png"
+                  alt="Hexavara logo"
+                />
+                <div class="footer-brand-copy">
+                  <div class="footer-brand-name">Hexavara Technology</div>
+                  <div class="footer-brand-tag">Software Development and IT Consulting</div>
+                </div>
+              </div>
+              <div class="footer-brand-description">
+                Surabaya<br />
+                Graha Bukopin Lantai 7 dan 12, Jl. Panglima Sudirman No. 10-18,
+                Embong Kaliasin, Genteng, Kota Surabaya, Jawa Timur 60271
+              </div>
+            </div>
+
+            <div class="footer-nav">
+              <div class="footer-links-group">
+                <div class="footer-heading">Company</div>
+                <a class="footer-link" href="index.html#works">Works</a>
+                <a class="footer-link" href="about_us.html">About Us</a>
+                <a class="footer-link" href="service.html">Services</a>
+                <a class="footer-link" href="index.html#solutions">Solutions</a>
+              </div>
+
+              <div class="footer-links-group footer-contact-group">
+                <div class="footer-heading">Contact Us</div>
+                <div class="footer-contact-item">info@hexavara.com</div>
+                <div class="footer-contact-item">+628113451550</div>
+              </div>
+
+              <div class="footer-links-group">
+                <div class="footer-heading">Follow Us</div>
+                <div class="footer-social-links">
+                  <a class="footer-social-link" href="https://www.instagram.com/hexavara/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a class="footer-social-link" href="https://www.linkedin.com/company/hexavara-technology/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a class="footer-social-link" href="https://api.whatsapp.com/send?phone=628113451550" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-bar">
+            <div class="footer-copyright">© 2026 Hexavara Tech. All rights reserved.</div>
+            <div class="footer-policy-links"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <button type="button" class="global-scroll-top-btn" aria-label="Back to top"><span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span></button>
+
+    <script>
+      (function () {
+        var trigger = document.getElementById('solutions-trigger');
+        var menu = document.getElementById('solutions-mega-menu');
+        var closeTimer = null;
+
+        if (!trigger || !menu) {
+          return;
+        }
+
+        function isOpen() {
+          return menu.classList.contains('is-open');
+        }
+
+        function openMenu() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+            closeTimer = null;
+          }
+          menu.classList.add('is-open');
+          trigger.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          menu.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeMenu() {
+          menu.classList.remove('is-open');
+          trigger.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        }
+
+        function scheduleClose() {
+          if (closeTimer) {
+            clearTimeout(closeTimer);
+          }
+          closeTimer = setTimeout(closeMenu, 120);
+        }
+
+        trigger.addEventListener('click', function (event) {
+          event.stopPropagation();
+          if (isOpen()) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        trigger.addEventListener('mouseenter', openMenu);
+        trigger.addEventListener('mouseleave', scheduleClose);
+        menu.addEventListener('mouseenter', openMenu);
+        menu.addEventListener('mouseleave', scheduleClose);
+
+        document.addEventListener('click', function (event) {
+          if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+    <script src="js/scroll_top.js"></script>
+  </body>
+</html>

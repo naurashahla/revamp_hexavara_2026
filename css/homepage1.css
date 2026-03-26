@@ -1,6 +1,6 @@
 :root {
   --design-width: 1280;
-  --design-height: 6670;
+  --design-height: 6541;
 }
 
 html,
@@ -50,7 +50,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50% 0;
-  top: 5161px;
+  top: 5032px;
 }
 .rectangle-27 {
   background: #f5f6f8;
@@ -667,7 +667,7 @@ body {
   max-width: 384px;
   position: absolute;
   left: 187px;
-  top: 1768px;
+  top: 1792px;
 }
 .text6 {
   color: #94a3b8;
@@ -678,9 +678,9 @@ body {
   font-weight: 400;
   position: relative;
   width: 347.94px;
-  height: 84px;
+  height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .group-10 {
@@ -700,6 +700,13 @@ body {
   position: absolute;
   left: 187px;
   top: 1988px;
+  text-decoration: none;
+}
+
+.button:visited,
+.button:hover,
+.button:active {
+  text-decoration: none;
 }
 .learn-more {
   color: #0a0f1a;
@@ -736,7 +743,7 @@ body {
   width: 382px;
   position: absolute;
   left: 187px;
-  top: 1725px;
+  top: 1712px;
 }
 .text7 {
   color: #ffffff;
@@ -747,11 +754,9 @@ body {
   font-weight: 700;
   position: relative;
   width: auto;
-  height: 36px;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  height: auto;
+  white-space: normal;
+  display: block;
 }
 .overlay {
   background: rgba(12, 91, 237, 0.2);
@@ -764,7 +769,7 @@ body {
   justify-content: flex-start;
   position: absolute;
   left: 187px;
-  top: 1683px;
+  top: 1676px;
 }
 .enterprise-saa-s {
   color: #0c5bed;
@@ -1101,7 +1106,7 @@ body {
   visibility: hidden;
   transition: opacity 0.25s ease, visibility 0.25s ease;
   z-index: 4;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .software-development-hover-title {
   color: #f8fafc;
@@ -1176,7 +1181,7 @@ body {
   visibility: hidden;
   transition: opacity 0.25s ease, visibility 0.25s ease;
   z-index: 4;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .startup-incubator-hover-card {
   left: 499px;
@@ -1243,7 +1248,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 5264px;
+  top: 5135px;
   width: 386.86px;
   height: 40px;
   display: flex;
@@ -1260,7 +1265,7 @@ body {
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 5320px;
+  top: 5191px;
   width: 400px;
   height: 28px;
   display: flex;
@@ -1277,7 +1282,7 @@ body {
   position: absolute;
   right: 83px;
   left: 85px;
-  top: 5410px;
+  top: 5281px;
 }
 .testimonial-1 {
   background: #ffffff;
@@ -1723,7 +1728,7 @@ body {
   left: 50%;
   translate: -50% 0;
   right: auto;
-  top: 5898px;
+  top: 5769px;
   overflow: hidden;
 }
 .section::before {
@@ -1845,6 +1850,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  text-decoration: none;
 }
 .button-shadow {
   background: rgba(255, 255, 255, 0);
@@ -2836,7 +2842,10 @@ body {
   justify-content: flex-start;
 }
 .rectangle-19 {
-  background: #0b1120;
+  background:
+    radial-gradient(600px 260px at 15% 8%, rgba(37, 99, 235, 0.18), rgba(37, 99, 235, 0) 60%),
+    radial-gradient(520px 240px at 88% 10%, rgba(30, 64, 175, 0.22), rgba(30, 64, 175, 0) 62%),
+    linear-gradient(180deg, #040d1f 0%, #07112a 52%, #08162f 100%);
   width: 100vw;
   height: 821px;
   position: absolute;
@@ -2848,15 +2857,15 @@ body {
   color: #ffffff;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 42px;
-  line-height: 40px;
+  font-size: 56px;
+  line-height: 1.05;
   font-weight: 700;
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 4630px;
-  width: 560px;
-  height: 40px;
+  top: 4618px;
+  width: 760px;
+  height: 60px;
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -2872,10 +2881,10 @@ body {
   left: 50%;
   translate: -50%;
   width: 960px;
-  top: 4691px;
+  top: 4698px;
 }
 .excellence-in-project-execution-strategic-oversight-trusted-technology-partner {
-  color: #9ca3af;
+  color: #a6b4cb;
   text-align: center;
   font-family: "Inter-Regular", sans-serif;
   font-size: 16px;
@@ -2891,18 +2900,18 @@ body {
   margin: 0 auto;
 }
 .our-value {
-  color: #9ca3af;
+  color: #9fb0cc;
   text-align: center;
   font-family: "Inter-SemiBold", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 1.4px;
+  letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 4596px;
+  top: 4586px;
   width: 160px;
   height: 20px;
   white-space: nowrap;
@@ -2911,59 +2920,67 @@ body {
   justify-content: center;
 }
 .rectangle-28 {
-  background: #0b1120;
+  background: rgba(7, 18, 44, 0.72);
   border-style: solid;
-  border-color: #1e293b;
+  border-color: rgba(60, 90, 136, 0.45);
   border-width: 1px;
-  width: 481px;
-  height: 200px;
+  border-radius: 16px;
+  width: 558px;
+  height: 186px;
   position: absolute;
   left: 133px;
-  top: 4780px;
+  top: 4786px;
 }
 .rectangle-30 {
-  background: #0b1120;
+  background: rgba(7, 18, 44, 0.72);
   border-style: solid;
-  border-color: #1e293b;
+  border-color: rgba(60, 90, 136, 0.45);
   border-width: 1px;
-  width: 481px;
-  height: 200px;
+  border-radius: 16px;
+  width: 558px;
+  height: 186px;
   position: absolute;
-  left: 131px;
-  top: 5014px;
+  left: 133px;
+  top: 5008px;
 }
 .rectangle-29 {
-  background: #0b1120;
+  background: rgba(7, 18, 44, 0.72);
   border-style: solid;
-  border-color: #1e293b;
+  border-color: rgba(60, 90, 136, 0.45);
   border-width: 1px;
-  width: 481px;
-  height: 200px;
+  border-radius: 16px;
+  width: 558px;
+  height: 186px;
   position: absolute;
-  left: 649px;
-  top: 4780px;
+  left: 720px;
+  top: 4786px;
 }
 .rectangle-31 {
-  background: #0b1120;
+  background: rgba(7, 18, 44, 0.72);
   border-style: solid;
-  border-color: #1e293b;
+  border-color: rgba(60, 90, 136, 0.45);
   border-width: 1px;
-  width: 481px;
-  height: 200px;
+  border-radius: 16px;
+  width: 558px;
+  height: 186px;
   position: absolute;
-  left: 647px;
-  top: 5014px;
+  left: 720px;
+  top: 5008px;
 }
 .image-7,
 .image-8 {
   display: none;
 }
 .group-50 {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.24);
   position: absolute;
   left: 165px;
-  top: 4803px;
+  top: 4808px;
   overflow: visible;
 }
 .group-52 {
@@ -2971,33 +2988,45 @@ body {
   inset: 0;
 }
 .image-82 {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.24);
   position: absolute;
   left: 165px;
-  top: 5037px;
+  top: 5030px;
 }
 .group-51 {
   position: absolute;
   inset: 0;
 }
 .image-83 {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.24);
   position: absolute;
-  left: 683px;
-  top: 4803px;
+  left: 744px;
+  top: 4808px;
 }
 .group-53 {
   position: absolute;
   inset: 0;
 }
 .image-84 {
-  width: 30px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.24);
   position: absolute;
-  left: 683px;
-  top: 5037px;
+  left: 744px;
+  top: 5030px;
 }
 .roadmap-for-timeline {
   color: #ffffff;
@@ -3008,8 +3037,8 @@ body {
   font-weight: 700;
   position: absolute;
   left: 165px;
-  top: 4843px;
-  width: 415px;
+  top: 4863px;
+  width: 520px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -3024,8 +3053,8 @@ body {
   font-weight: 700;
   position: absolute;
   left: 165px;
-  top: 5077px;
-  width: 415px;
+  top: 5085px;
+  width: 520px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -3039,9 +3068,9 @@ body {
   line-height: 28px;
   font-weight: 700;
   position: absolute;
-  left: 683px;
-  top: 4843px;
-  width: 415px;
+  left: 744px;
+  top: 4863px;
+  width: 520px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -3055,16 +3084,16 @@ body {
   line-height: 28px;
   font-weight: 700;
   position: absolute;
-  left: 683px;
-  top: 5077px;
-  width: 415px;
+  left: 744px;
+  top: 5085px;
+  width: 520px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 .our-roadmap-contains-a-detailed-list-of-tasks-and-project-timelines-that-you-can-monitor-at-any-time-each-roadmap-is-created-based-on-mutual-agreement {
-  color: #64748b;
+  color: #aebbd1;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 14px;
@@ -3072,15 +3101,15 @@ body {
   font-weight: 400;
   position: absolute;
   left: 165px;
-  top: 4879px;
-  width: 415px;
+  top: 4916px;
+  width: 520px;
   height: 88px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 .we-guarantee-maximum-service-with-bug-fixes-and-improvements-handled-within-48-hours-this-feature-allows-you-to-easily-track-your-requests {
-  color: #64748b;
+  color: #aebbd1;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 14px;
@@ -3088,68 +3117,201 @@ body {
   font-weight: 400;
   position: absolute;
   left: 165px;
-  top: 5113px;
-  width: 415px;
+  top: 5138px;
+  width: 520px;
   height: 88px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 .this-feature-helps-control-sprints-ensuring-our-programmers-work-according-to-the-time-you-ve-purchased-it-also-guarantees-that-your-project-is-success {
-  color: #64748b;
+  color: #aebbd1;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 14px;
   line-height: 22.75px;
   font-weight: 400;
   position: absolute;
-  left: 683px;
-  top: 4879px;
-  width: 415px;
+  left: 744px;
+  top: 4916px;
+  width: 520px;
   height: 88px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 .each-of-our-talents-has-daily-and-monthly-targets-aligned-with-the-time-you-ve-purchased-they-compete-to-deliver-their-best-performance {
-  color: #64748b;
+  color: #aebbd1;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 14px;
   line-height: 22.75px;
   font-weight: 400;
   position: absolute;
-  left: 683px;
-  top: 5113px;
-  width: 415px;
+  left: 744px;
+  top: 5138px;
+  width: 520px;
   height: 88px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
-/* Pull the section after Projects upward to tighten the vertical gap */
-.rectangle-19,
-.why-choose-hexavara,
-.container41,
-.our-value,
-.rectangle-28,
-.rectangle-29,
-.rectangle-30,
-.rectangle-31,
-.group-50,
-.image-82,
-.image-83,
-.image-84,
-.roadmap-for-timeline,
-.maximum-service,
-.weekly-sprint-monitoring,
-.monitor-team-performanc,
-.our-roadmap-contains-a-detailed-list-of-tasks-and-project-timelines-that-you-can-monitor-at-any-time-each-roadmap-is-created-based-on-mutual-agreement,
-.we-guarantee-maximum-service-with-bug-fixes-and-improvements-handled-within-48-hours-this-feature-allows-you-to-easily-track-your-requests,
-.this-feature-helps-control-sprints-ensuring-our-programmers-work-according-to-the-time-you-ve-purchased-it-also-guarantees-that-your-project-is-success,
-.each-of-our-talents-has-daily-and-monthly-targets-aligned-with-the-time-you-ve-purchased-they-compete-to-deliver-their-best-performance {
-  transform: translateY(-160px);
+/* Home value section (same visual language as service value block) */
+.home-value-section {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  top: 4340px;
+  background: linear-gradient(180deg, #0a1222 0%, #0d1528 100%);
+  padding: 72px 48px;
+  box-shadow: 0 16px 0 #0d1528;
+  overflow: hidden;
+}
+
+.home-value-section::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -120px -120px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
+}
+
+.home-value-section::after {
+  content: "";
+  position: absolute;
+  inset: -120px -120px auto auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+}
+
+.home-value-inner {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-value-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-value-section .our-value {
+  position: static;
+  translate: none;
+  width: auto;
+  height: auto;
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+}
+
+.home-value-section .why-choose-hexavara {
+  position: static;
+  translate: none;
+  width: auto;
+  height: auto;
+  margin: 12px 0 0;
+  white-space: normal;
+  display: block;
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.home-value-section .container41 {
+  position: static;
+  translate: none;
+  width: auto;
+  margin: 16px auto 0;
+  display: block;
+  text-align: center;
+}
+
+.home-value-section .excellence-in-project-execution-strategic-oversight-trusted-technology-partner {
+  position: static;
+  width: auto;
+  max-width: none;
+  min-height: 0;
+  height: auto;
+  white-space: normal;
+  color: rgba(226, 232, 240, 0.68);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.home-value-grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.home-value-card {
+  background: rgba(15, 23, 42, 0.56);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  padding: 20px 20px 18px;
+  min-height: 100%;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.home-value-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.18);
+  color: #60a5fa;
+}
+
+.home-value-section .roadmap-for-timeline,
+.home-value-section .maximum-service,
+.home-value-section .weekly-sprint-monitoring,
+.home-value-section .monitor-team-performanc {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 12px 0 0;
+  display: block;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: left;
+}
+
+.home-value-section .our-roadmap-contains-a-detailed-list-of-tasks-and-project-timelines-that-you-can-monitor-at-any-time-each-roadmap-is-created-based-on-mutual-agreement,
+.home-value-section .we-guarantee-maximum-service-with-bug-fixes-and-improvements-handled-within-48-hours-this-feature-allows-you-to-easily-track-your-requests,
+.home-value-section .this-feature-helps-control-sprints-ensuring-our-programmers-work-according-to-the-time-you-ve-purchased-it-also-guarantees-that-your-project-is-success,
+.home-value-section .each-of-our-talents-has-daily-and-monthly-targets-aligned-with-the-time-you-ve-purchased-they-compete-to-deliver-their-best-performance {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 8px 0 0;
+  display: block;
+  color: rgba(226, 232, 240, 0.68);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 500;
+  text-align: left;
 }
 .icon {
   width: 25px;
@@ -3501,6 +3663,7 @@ body {
   position: absolute;
   left: 968px;
   top: 2236px;
+  text-decoration: none;
 }
 .view-all-services {
   color: #2563eb;
@@ -3848,6 +4011,8 @@ body {
   min-height: 100%;
   box-shadow: 0 18px 40px rgba(148, 163, 184, 0.12);
   transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  text-decoration: none;
+  color: inherit;
 }
 .project-card:hover {
   transform: translateY(-8px);
@@ -3941,6 +4106,8 @@ body {
   outline: none;
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
   transition: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 body.lang-id .button-shadow3 {

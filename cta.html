@@ -137,8 +137,8 @@
 
           <div class="form-block">
             <h3>Choose the category</h3>
-            <div class="chips">
-              <button type="button" class="chip chip-active">All</button>
+            <div class="chips" id="category-chips">
+              <button type="button" class="chip">All</button>
               <button type="button" class="chip">Web Development</button>
               <button type="button" class="chip">Mobile Apps Development</button>
               <button type="button" class="chip">GIS</button>
@@ -161,7 +161,7 @@
 
           <div class="form-block">
             <h3>Budget (in IDR/Indonesian Rupiah)</h3>
-            <div class="chips">
+            <div class="chips" id="budget-chips">
               <button type="button" class="chip">&lt; 50JT</button>
               <button type="button" class="chip">50JT - 100JT</button>
               <button type="button" class="chip">100JT - 300JT</button>
@@ -529,8 +529,8 @@
           var introLines = document.querySelectorAll('.intro-section p');
           var fieldLabels = document.querySelectorAll('.form-grid label span');
           var formBlocks = document.querySelectorAll('.form-block h3');
-          var categoryChips = document.querySelectorAll('.form-block .chips')[0];
-          var budgetChips = document.querySelectorAll('.form-block .chips')[1];
+          var categoryChips = document.getElementById('category-chips');
+          var budgetChips = document.getElementById('budget-chips');
           var uploadTitle = document.querySelector('.upload-title');
           var uploadCaption = document.querySelector('.upload-caption');
           var submitBtn = document.querySelector('.submit-btn');
@@ -601,10 +601,10 @@
           });
 
           if (categoryChips) {
-            applyTextList('.form-block:first-of-type .chip', config.categoryChips);
+            applyTextList('#category-chips .chip', config.categoryChips);
           }
           if (budgetChips) {
-            applyTextList('.form-block:nth-of-type(2) .chip', config.budgetChips);
+            applyTextList('#budget-chips .chip', config.budgetChips);
           }
 
           if (uploadTitle) { uploadTitle.textContent = config.uploadTitle; }
@@ -665,6 +665,24 @@
 
         var storedLanguage = localStorage.getItem('hexavara-lang');
         setActive(storedLanguage === 'id' ? 'id' : 'en');
+      })();
+
+      (function () {
+        var chipGroups = document.querySelectorAll('.form-block .chips');
+
+        chipGroups.forEach(function (group) {
+          var chips = group.querySelectorAll('.chip');
+
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              chips.forEach(function (item) {
+                item.classList.remove('chip-active');
+                item.classList.remove('is-selected');
+              });
+              chip.classList.add('is-selected');
+            });
+          });
+        });
       })();
 
       (function () {
