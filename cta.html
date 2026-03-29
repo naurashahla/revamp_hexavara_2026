@@ -8,847 +8,391 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48"
     />
-    <link rel="stylesheet" href="css/cta.css" />
-  </head>
-  <body>
-    <div class="cta-page">
-      <header class="site-header">
-        <a class="logo-home-link" href="index.html" aria-label="Go to homepage">
-          <img
-            class="site-logo"
-            src="img/ChatGPT Image 26 Feb 2026, 11.24.32.png"
-            alt="Hexavara logo"
-          />
-        </a>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0,0,20..48" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hex-dark': '#0f172a',
+                        'hex-blue': '#2563eb',
+                        'hex-blue-light': '#0c5bed',
+                        'hex-orange': '#ec5b13',
+                        'hex-surface': '#f5f6f8',
+                        'hex-slate': '#475569',
+                        'hex-slate-light': '#64748b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .is-open { display: block !important; }
+        #mobile-menu.is-open { transform: translateX(0); }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
 
-        <nav class="site-nav" aria-label="Main navigation">
-          <a class="nav-link" href="works.html">Works</a>
-          <a class="nav-link" href="about_us.html">About Us</a>
-          <a class="nav-link" href="service.html">Services</a>
-          <button
-            class="nav-link nav-solutions-trigger"
-            id="solutions-trigger"
-            type="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="solutions-mega-menu"
-          >
-            Solutions
-          </button>
-        </nav>
+<body class="bg-white text-hex-dark antialiased overflow-x-hidden relative">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="relative w-full z-[120] bg-white lg:h-[103px] border-b border-gray-100 lg:border-none">
+        <div class="max-w-[1280px] mx-auto h-full flex items-center justify-between px-4 lg:px-0 relative">
+            <a href="index.html" class="lg:absolute lg:left-[37px] lg:top-[27px] block">
+                <img src="img/brand-logo-main.png" alt="Hexavara" class="w-[160px] md:w-[207px] h-auto object-contain">
+            </a>
 
-        <div class="solutions-mega-menu" id="solutions-mega-menu" aria-hidden="true">
-          <div class="solutions-mega-menu-inner">
-            <div class="solutions-mega-column">
-              <h3 class="solutions-mega-title">Solution by Service</h3>
-              <div class="solutions-mega-list">
-                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><span>Enterprise Resource Planning</span></a>
-                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>Customer Relationship Management</span></a>
-                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">query_stats</span><span>Business Intelligence &amp; Analytics</span></a>
-                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">cloud_sync</span><span>Cloud Migration &amp; Strategy</span></a>
-                <a class="solutions-mega-link" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span><span>Cybersecurity &amp; Compliance</span></a>
-              </div>
+            <!-- Mobile Menu Toggles -->
+            <div class="flex items-center gap-4 lg:hidden">
+                <div class="flex items-center gap-2 bg-gray-100 p-1 rounded-lg">
+                    <button class="px-2 py-0.5 text-[8px] font-black rounded-md active bg-white shadow-sm" data-lang="en">EN</button>
+                    <button class="px-2 py-0.5 text-[8px] font-black rounded-md text-gray-500" data-lang="id">ID</button>
+                </div>
+                <button id="mobile-menu-open" class="p-2 text-hex-dark">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
-            <div class="solutions-mega-column">
-              <h3 class="solutions-mega-title">Solution by Industry</h3>
-              <div class="solutions-mega-list">
-                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span>Consumer Goods</span></a>
-                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">monitor_heart</span><span>Healthcare</span></a>
-                <a class="solutions-mega-link solutions-mega-link-industry" href="solution.html"><span class="material-symbols-outlined" aria-hidden="true">conveyor_belt</span><span>Supply Chain</span></a>
-              </div>
+
+            <nav class="hidden lg:flex items-center gap-8 absolute left-[380px] top-1/2 -translate-y-1/2">
+                <a href="works.html" class="text-[17px] font-medium text-black hover:text-hex-blue transition-colors" data-i18n data-en="Works" data-id="Portofolio">Works</a>
+                <a href="about_us.html" class="text-[17px] font-medium text-black hover:text-hex-blue transition-colors" data-i18n data-en="About Us" data-id="Tentang Kami">About Us</a>
+                <a href="service.html" class="text-[17px] font-medium text-black hover:text-hex-blue transition-colors" data-i18n data-en="Services" data-id="Layanan">Services</a>
+                <button id="solutions-trigger" class="text-[17px] font-medium text-black hover:text-hex-blue flex items-center gap-1 transition-colors">
+                    <span data-i18n data-en="Solutions" data-id="Solusi">Solutions</span>
+                </button>
+            </nav>
+            <div class="hidden lg:flex items-center gap-4 absolute left-[970px] top-[32px] w-[247px] h-[40px]">
+                <div class="language-switch flex bg-gray-200 p-1 rounded-lg h-8 items-center" id="lang-switcher">
+                    <button class="px-3 py-1 text-[10px] font-black rounded-md lang-en active bg-white shadow-sm" data-lang="en">EN</button>
+                    <button class="px-3 py-1 text-[10px] font-black rounded-md lang-id text-gray-500" data-lang="id">ID</button>
+                </div>
+                <a href="cta.html" class="px-6 py-2.5 bg-hex-dark text-white rounded-xl text-sm font-bold hover:opacity-90 transition-all whitespace-nowrap shadow-lg" data-i18n data-en="Start a Project?" data-id="Mulai Proyek?">Start a Project?</a>
             </div>
-            <div class="solutions-mega-column">
-              <h3 class="solutions-mega-title">Ready to Use Platform</h3>
-              <div class="solutions-platform-list">
-                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-teal"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span></div><div><p class="solutions-platform-name">Crowdfunding</p><p class="solutions-platform-meta">Platform</p></div></div>
-                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-red"><span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span></div><div><p class="solutions-platform-name">Corporate Budgeting</p><p class="solutions-platform-meta">Platform</p></div></div>
-                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-orange"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></div><div><p class="solutions-platform-name">E-Commerce</p><p class="solutions-platform-meta">Platform</p></div></div>
-                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-green"><span class="material-symbols-outlined" aria-hidden="true">event</span></div><div><p class="solutions-platform-name">Event Management</p><p class="solutions-platform-meta">Platform</p></div></div>
-                <div class="solutions-platform-item"><div class="solutions-platform-icon solutions-platform-icon-blue"><span class="material-symbols-outlined" aria-hidden="true">storefront</span></div><div><p class="solutions-platform-name">Multi-Merchant</p><p class="solutions-platform-meta">Platform</p></div></div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="header-actions">
-          <div class="language-switch" aria-label="Language switcher">
-            <button type="button" class="lang-button active" id="lang-en-btn" aria-pressed="true">EN</button>
-            <button type="button" class="lang-button" id="lang-id-btn" aria-pressed="false">ID</button>
-          </div>
-          <a class="header-cta" href="#consult">Start a Project?</a>
-        </div>
-      </header>
+        <!-- Mobile Menu Sidebar -->
+        <div id="mobile-menu" class="fixed inset-0 z-[200] bg-white transform translate-x-full transition-transform duration-300 overflow-y-auto lg:hidden">
+            <div class="p-6">
+                <!-- Mobile Header -->
+                <div class="flex items-center justify-between mb-12">
+                    <img src="img/brand-logo-main.png" alt="Hexavara" class="h-8 w-auto">
+                    <button id="mobile-menu-close" class="p-2 text-hex-dark">
+                        <span class="material-symbols-outlined text-3xl">close</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Links -->
+                <div class="flex flex-col gap-6 mb-12">
+                    <a href="works.html" class="text-2xl font-bold text-hex-dark" data-i18n data-en="Works" data-id="Portofolio">Works</a>
+                    <a href="about_us.html" class="text-2xl font-bold text-hex-dark" data-i18n data-en="About Us" data-id="Tentang Kami">About Us</a>
+                    <a href="service.html" class="text-2xl font-bold text-hex-dark" data-i18n data-en="Services" data-id="Layanan">Services</a>
+                    <div class="border-t border-gray-100 pt-6">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Solutions</p>
+                        <div class="grid grid-cols-1 gap-4">
+                            <a href="service.html" class="flex items-center gap-3 text-lg font-medium text-hex-dark">
+                                <span class="material-symbols-outlined text-hex-blue">dashboard_customize</span> 
+                                <span data-i18n data-en="Custom Software" data-id="Perangkat Lunak Khusus">Custom Software</span>
+                            </a>
+                            <a href="service.html" class="flex items-center gap-3 text-lg font-medium text-hex-dark">
+                                <span class="material-symbols-outlined text-hex-blue">rocket_launch</span>
+                                <span data-i18n data-en="Startup Services" data-id="Layanan Startup">Startup Services</span>
+                            </a>
+                            <a href="detail_product.html" class="flex items-center gap-3 text-lg font-medium text-hex-dark">
+                                <span class="material-symbols-outlined text-hex-blue">account_balance_wallet</span>
+                                <span data-i18n data-en="Cost System" data-id="Sistem Biaya">Cost System</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-      <main class="cta-content" id="consult">
-        <section class="intro-section">
-          <h1>Start a project and grow your business with techonology.</h1>
-          <p>
-            By fill in the form below or you could
-            <a href="mailto:info@hexavara.com">send us an email.</a>
-          </p>
-          <p>
-            If you prefer to get more quick response and conversation, hit us up on
-            <a href="https://wa.me/628113451550" target="_blank" rel="noopener noreferrer">whatsapp!</a>
+                <div class="mt-auto">
+                    <a href="cta.html" class="block w-full text-center px-8 py-4 bg-hex-dark text-white rounded-2xl font-bold text-lg" data-i18n data-en="Start a Project?" data-id="Mulai Proyek?">Start a Project?</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mega Menu inner (restored content) -->
+        <div id="solutions-mega-menu" class="solutions-mega-menu absolute left-1/2 top-[88px] w-[min(1180px,calc(100vw-32px))] bg-white border border-gray-100 rounded-2xl shadow-2xl p-8 z-[140]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-xs font-bold text-hex-slate uppercase tracking-widest mb-6 pb-2 border-b" data-i18n data-en="Solution by Service" data-id="Solusi Berdasarkan Layanan">Solution by Service</h3>
+                    <div class="space-y-4">
+                        <a href="service.html" class="flex items-center gap-3 text-sm font-medium text-hex-dark hover:text-hex-blue transition-colors group">
+                            <span class="material-symbols-outlined text-hex-blue group-hover:scale-110 transition-transform">dashboard_customize</span> 
+                            <span data-i18n data-en="Custom Software" data-id="Perangkat Lunak Khusus">Custom Software</span>
+                        </a>
+                        <a href="service.html" class="flex items-center gap-3 text-sm font-medium text-hex-dark hover:text-hex-blue transition-colors group">
+                            <span class="material-symbols-outlined text-hex-blue group-hover:scale-110 transition-transform">rocket_launch</span>
+                            <span data-i18n data-en="Startup Services" data-id="Layanan Startup">Startup Services</span>
+                        </a>
+                        <a href="service.html" class="flex items-center gap-3 text-sm font-medium text-hex-dark hover:text-hex-blue transition-colors group">
+                            <span class="material-symbols-outlined text-hex-blue group-hover:scale-110 transition-transform">settings_suggest</span>
+                            <span data-i18n data-en="Managed IT" data-id="IT Terkelola">Managed IT</span>
+                        </a>
+                        <a href="service.html" class="flex items-center gap-3 text-sm font-medium text-hex-dark hover:text-hex-blue transition-colors group">
+                            <span class="material-symbols-outlined text-hex-blue group-hover:scale-110 transition-transform">psychology</span>
+                            <span data-i18n data-en="IT Consulting" data-id="Konsultasi TI">IT Consulting</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold text-hex-slate uppercase tracking-widest mb-6 pb-2 border-b" data-i18n data-en="Ready to Use" data-id="Siap Digunakan">Ready to Use</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="detail_product.html" class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 group cursor-pointer hover:bg-blue-100 transition-colors">
+                            <span class="material-symbols-outlined text-blue-600">account_balance_wallet</span>
+                            <div><p class="text-[10px] font-bold" data-i18n data-en="Cost System" data-id="Sistem Biaya">Cost System</p><p class="text-[8px] text-blue-600 uppercase font-bold" data-i18n data-en="Platform" data-id="Platform">Platform</p></div>
+                        </a>
+                        <a href="#" class="p-3 bg-indigo-50 rounded-xl flex items-center gap-3 group cursor-pointer hover:bg-indigo-100 transition-colors">
+                            <span class="material-symbols-outlined text-indigo-600">payments</span>
+                            <div><p class="text-[10px] font-bold" data-i18n data-en="VaraPay" data-id="VaraPay">VaraPay</p><p class="text-[8px] text-indigo-600 uppercase font-bold" data-i18n data-en="Fintech" data-id="Fintech">Fintech</p></div>
+                        </a>
+                        <a href="#" class="p-3 bg-teal-50 rounded-xl flex items-center gap-3 group cursor-pointer hover:bg-teal-100 transition-colors">
+                            <span class="material-symbols-outlined text-teal-600">grid_view</span>
+                            <div><p class="text-[10px] font-bold" data-i18n data-en="NexaGrid" data-id="NexaGrid">NexaGrid</p><p class="text-[8px] text-teal-600 uppercase font-bold" data-i18n data-en="AI Suite" data-id="Suite AI">AI Suite</p></div>
+                        </a>
+                        <a href="#" class="p-3 bg-sky-50 rounded-xl flex items-center gap-3 group cursor-pointer hover:bg-sky-100 transition-colors">
+                            <span class="material-symbols-outlined text-sky-600">cloud</span>
+                            <div><p class="text-[10px] font-bold" data-i18n data-en="VaraCloud" data-id="VaraCloud">VaraCloud</p><p class="text-[8px] text-sky-600 uppercase font-bold" data-i18n data-en="Infra" data-id="Infra">Infra</p></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-2xl flex flex-col justify-center">
+                    <p class="text-sm font-bold text-hex-dark mb-2" data-i18n data-en="Need a custom solution?" data-id="Butuh solusi khusus?">Need a custom solution?</p>
+                    <p class="text-[12px] text-hex-slate mb-6" data-i18n data-en="Our team of experts is ready to help you build the perfect platform for your business needs." data-id="Tim ahli kami siap membantu Anda membangun platform yang sempurna untuk kebutuhan bisnis Anda.">Our team of experts is ready to help you build the perfect platform for your business needs.</p>
+                    <a href="cta.html" class="text-sm font-bold text-hex-blue flex items-center gap-2 hover:gap-3 transition-all" data-i18n="html" data-en="Talk to us <span class='material-symbols-outlined text-sm'>arrow_forward</span>" data-id="Hubungi kami <span class='material-symbols-outlined text-sm'>arrow_forward</span>">Talk to us <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cta-content max-w-6xl mx-auto px-6 pt-16 pb-20" id="consult">
+        <section class="intro-section text-center max-w-4xl mx-auto">
+          <h1 class="text-4xl md:text-5xl lg:text-[54px] font-bold text-slate-900 tracking-tight leading-tight m-0" data-i18n="html" data-en="Start a project and <span class='text-hex-blue'>grow your business</span> with technology." data-id="Mulai proyek dan <span class='text-hex-blue'>kembangkan bisnis</span> Anda dengan teknologi.">Start a project and <span class="text-hex-blue">grow your business</span> with technology.</h1>
+          <p class="mt-6 text-lg text-slate-500 leading-relaxed max-w-2xl mx-auto" data-i18n="html" 
+             data-en="Fill in the form below or you could <a href='mailto:info@hexavara.com' class='text-slate-800 font-medium hover:text-blue-600 transition-colors'>send us an email.</a> If you prefer more quick responses, hit us up on <a href='https://wa.me/628113451550' target='_blank' rel='noopener noreferrer' class='text-slate-800 font-medium hover:text-blue-600 transition-colors'>whatsapp!</a>" 
+             data-id="Isi formulir di bawah ini atau Anda dapat <a href='mailto:info@hexavara.com' class='text-slate-800 font-medium hover:text-blue-600 transition-colors'>mengirimkan email.</a> Jika Anda membutuhkan respons lebih cepat, hubungi kami melalui <a href='https://wa.me/628113451550' target='_blank' rel='noopener noreferrer' class='text-slate-800 font-medium hover:text-blue-600 transition-colors'>WhatsApp!</a>">
+            Fill in the form below or you could <a href="mailto:info@hexavara.com" class="text-slate-800 font-medium hover:text-blue-600 transition-colors">send us an email.</a> If you prefer more quick responses, hit us up on <a href="https://wa.me/628113451550" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-medium hover:text-blue-600 transition-colors">whatsapp!</a>
           </p>
         </section>
 
-        <section class="ai-assistant-banner" aria-label="AI discussion helper">
-          <div class="ai-assistant-icon-wrap" aria-hidden="true">
-            <span class="material-symbols-outlined">auto_awesome</span>
+        <section class="ai-assistant-banner mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between shadow-sm" aria-label="AI discussion helper">
+          <div class="flex items-center gap-6">
+              <div class="ai-assistant-icon-wrap w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0" aria-hidden="true">
+                <span class="material-symbols-outlined text-blue-600 text-4xl">auto_awesome</span>
+              </div>
+              <div class="ai-assistant-copy flex-1">
+                <h2 class="text-xl font-bold text-slate-900 m-0 mb-2" data-i18n data-en="Confused explaining your project?" data-id="Bingung menjelaskan proyek Anda?">Confused explaining your project?</h2>
+                <p class="text-sm md:text-base text-slate-600 max-w-2xl" data-i18n data-en="Use AI Assistant to help summarize and structure your project needs clearly." data-id="Gunakan AI Assistant untuk merangkum dan menyusun kebutuhan proyek Anda dengan jelas.">Use AI Assistant to help summarize and structure your project needs clearly.
+                </p>
+              </div>
           </div>
-          <div class="ai-assistant-copy">
-            <h2>Bingung menjelaskan proyek Anda?</h2>
-            <p>
-              Gunakan AI Assistant untuk membantu merangkum dan menyusun kebutuhan
-              proyek Anda secara lebih jelas.
-            </p>
-          </div>
-          <button type="button" class="ai-assistant-button" id="open-ai-discussion">
+          <button type="button" class="ai-assistant-button bg-[#2563eb] hover:brightness-110 shadow-[0_10px_22px_rgba(37,99,235,0.22)] hover:-translate-y-1 text-white font-bold text-base px-8 py-4 rounded-xl transition-all whitespace-nowrap shrink-0 border-0 cursor-pointer" onclick="alert('Fitur Diskusi dengan AI saat ini sedang dalam pengembangan tahap lanjut. Silakan tinggalkan kontak Anda pada form di bawah ini agar tim spesialis kami dapat menghubungi Anda.')" id="open-ai-discussion" data-i18n data-en="Discuss with AI First" data-id="Diskusi dengan AI Dulu">
             Discuss with AI First
           </button>
         </section>
 
-        <section class="form-section">
-          <h2>Let us know about you</h2>
+        <section class="form-section mt-12">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6 m-0" data-i18n data-en="Let us know about you" data-id="Beritahu kami tentang Anda">Let us know about you</h2>
 
-          <div class="form-grid">
-            <label>
-              <span>Name</span>
-              <input type="text" placeholder="Input your name" />
+          <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6">
+            <label class="block">
+              <span class="block mb-2 text-slate-900 font-semibold text-lg" data-i18n data-en="Name" data-id="Nama">Name</span>
+              <input type="text" placeholder="Masukkan nama Anda" class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white text-sm text-slate-800 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400" data-i18n-placeholder data-en="Input your name" data-id="Masukkan nama Anda" />
             </label>
-            <label>
-              <span>Email</span>
-              <input type="email" placeholder="Input your email" />
+            <label class="block">
+              <span class="block mb-2 text-slate-900 font-semibold text-lg" data-i18n data-en="Email" data-id="Email">Email</span>
+              <input type="email" placeholder="Masukkan email Anda" class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white text-sm text-slate-800 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400" data-i18n-placeholder data-en="Input your email" data-id="Masukkan email Anda" />
             </label>
-            <label>
-              <span>Phone Number</span>
-              <input type="text" placeholder="Input your number" />
+            <label class="block">
+              <span class="block mb-2 text-slate-900 font-semibold text-lg" data-i18n data-en="Phone Number" data-id="Nomor Telepon">Phone Number</span>
+              <input type="text" placeholder="Masukkan nomor Anda" class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white text-sm text-slate-800 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400" data-i18n-placeholder data-en="Input your number" data-id="Masukkan nomor Anda" />
             </label>
-            <label>
-              <span>Your Company</span>
-              <input type="text" placeholder="Input your company" />
+            <label class="block">
+              <span class="block mb-2 text-slate-900 font-semibold text-lg" data-i18n data-en="Your Company" data-id="Perusahaan Anda">Your Company</span>
+              <input type="text" placeholder="Masukkan perusahaan Anda" class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white text-sm text-slate-800 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400" data-i18n-placeholder data-en="Input your company" data-id="Masukkan perusahaan Anda" />
             </label>
           </div>
 
-          <label class="full-field">
-            <span>Tell Us about your project</span>
-            <textarea rows="5" placeholder="Tell us more about the project you want to realize"></textarea>
+          <label class="full-field block mt-6">
+            <span class="block mb-2 text-slate-900 font-semibold text-lg" data-i18n data-en="Tell Us about your project" data-id="Ceritakan tentang proyek Anda">Tell Us about your project</span>
+            <textarea rows="5" placeholder="Ceritakan lebih lanjut tentang proyek yang ingin Anda wujudkan" class="w-full border border-slate-300 rounded-lg px-4 py-3 bg-white text-sm text-slate-800 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 resize-y min-h-[150px]" data-i18n-placeholder data-en="Tell us more about the project you want to realize" data-id="Ceritakan lebih lanjut tentang proyek yang ingin Anda wujudkan"></textarea>
           </label>
 
-          <div class="form-block">
-            <h3>Choose the category</h3>
-            <div class="chips" id="category-chips">
-              <button type="button" class="chip">All</button>
-              <button type="button" class="chip">Web Development</button>
-              <button type="button" class="chip">Mobile Apps Development</button>
-              <button type="button" class="chip">GIS</button>
-              <button type="button" class="chip">Internet of Things</button>
-              <button type="button" class="chip">ERP</button>
-              <button type="button" class="chip">Accounting Software</button>
-              <button type="button" class="chip">Network Security</button>
-              <button type="button" class="chip">Endpoint Security</button>
-              <button type="button" class="chip">Cloud Security</button>
-              <button type="button" class="chip">Advertising</button>
-              <button type="button" class="chip">Digital Branding</button>
-              <button type="button" class="chip">Aerial Photography Videography</button>
-              <button type="button" class="chip">Videography</button>
-              <button type="button" class="chip">Branding</button>
-              <button type="button" class="chip">Motion Graphic</button>
-              <button type="button" class="chip">Graphic Design</button>
-              <button type="button" class="chip">3D Assets</button>
+          <div class="form-block mt-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 m-0" data-i18n data-en="Choose the category" data-id="Pilih kategori">Choose the category</h3>
+            <div class="chips flex flex-wrap gap-2" id="category-chips">
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="All" data-id="Semua">All</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Web Development" data-id="Pengembangan Web">Web Development</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Mobile Apps Development" data-id="Pengembangan Aplikasi Mobile">Mobile Apps Development</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="GIS" data-id="GIS">GIS</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Internet of Things" data-id="Internet of Things">Internet of Things</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="ERP" data-id="ERP">ERP</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Accounting Software" data-id="Perangkat Lunak Akuntansi">Accounting Software</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Network Security" data-id="Keamanan Jaringan">Network Security</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Endpoint Security" data-id="Keamanan Endpoint">Endpoint Security</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Cloud Security" data-id="Keamanan Cloud">Cloud Security</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Advertising" data-id="Periklanan">Advertising</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Digital Branding" data-id="Branding Digital">Digital Branding</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Aerial Photography Videography" data-id="Fotografi Udara Videografi">Aerial Photography Videography</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Videography" data-id="Videografi">Videography</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Branding" data-id="Branding">Branding</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Motion Graphic" data-id="Grafis Gerak (Motion)">Motion Graphic</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="Graphic Design" data-id="Desain Grafis">Graphic Design</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600" data-i18n data-en="3D Assets" data-id="Aset 3D">3D Assets</button>
             </div>
           </div>
 
-          <div class="form-block">
-            <h3>Budget (in IDR/Indonesian Rupiah)</h3>
-            <div class="chips" id="budget-chips">
-              <button type="button" class="chip">&lt; 50JT</button>
-              <button type="button" class="chip">50JT - 100JT</button>
-              <button type="button" class="chip">100JT - 300JT</button>
-              <button type="button" class="chip">300JT - 1M</button>
-              <button type="button" class="chip">1M - 3M</button>
-              <button type="button" class="chip">3M - 10M</button>
-              <button type="button" class="chip">&gt; 10M</button>
+          <div class="form-block mt-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 m-0" data-i18n data-en="Budget (in IDR/Indonesian Rupiah)" data-id="Anggaran (dalam IDR/Rupiah Indonesia)">Budget (in IDR/Indonesian Rupiah)</h3>
+            <div class="chips flex flex-wrap gap-2" id="budget-chips">
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">&lt; 50JT</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">50JT - 100JT</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">100JT - 300JT</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">300JT - 1M</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">1M - 3M</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">3M - 10M</button>
+              <button type="button" class="chip border border-slate-300 rounded-full px-4 py-2 bg-white text-slate-600 text-sm font-medium hover:border-slate-400 cursor-pointer transition-colors [&.is-selected]:bg-blue-600 [&.is-selected]:text-white [&.is-selected]:border-blue-600 [&.chip-active]:bg-blue-600 [&.chip-active]:text-white [&.chip-active]:border-blue-600">&gt; 10M</button>
             </div>
           </div>
 
-          <div class="form-block">
-            <h3>Upload Project Brief</h3>
-            <label class="upload-box">
-              <input type="file" />
-              <span class="material-symbols-outlined upload-icon" aria-hidden="true">cloud_upload</span>
-              <div class="upload-title">Click to Upload</div>
-              <div class="upload-caption">SVG, PNG, JPG, DOCS, PDF or PPT (max. 5 MB)</div>
+          <div class="form-block mt-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 m-0" data-i18n data-en="Upload Project Brief" data-id="Unggah Brief Proyek">Upload Project Brief</h3>
+            <label class="upload-box flex flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-300 bg-slate-50 rounded-lg min-h-[144px] cursor-pointer hover:bg-slate-100 transition-colors text-center w-full">
+              <input type="file" class="hidden" />
+              <span class="material-symbols-outlined upload-icon text-slate-500 text-2xl" aria-hidden="true">cloud_upload</span>
+              <div class="upload-title text-blue-600 text-sm font-medium" data-i18n data-en="Click to Upload" data-id="Klik untuk Unggah">Click to Upload</div>
+              <div class="upload-caption text-slate-500 text-xs" data-i18n data-en="SVG, PNG, JPG, DOCS, PDF or PPT (max. 5 MB)" data-id="SVG, PNG, JPG, DOCS, PDF atau PPT (maks. 5 MB)">SVG, PNG, JPG, DOCS, PDF or PPT (max. 5 MB)</div>
             </label>
           </div>
 
-          <button class="submit-btn" type="button">Send Request!</button>
+          <button class="submit-btn mt-8 bg-hex-dark hover:shadow-2xl hover:-translate-y-1 text-white font-bold text-base px-8 py-4 rounded-xl transition-all shadow-xl block w-full md:w-auto" type="button" onclick="alert('Permintaan berhasil dikirim. Kami akan segera menghubungi Anda.')" data-i18n data-en="Send Request!" data-id="Kirim Permintaan!">Send Request!</button>
         </section>
 
-        <div class="ai-discussion-modal" id="ai-discussion-modal" aria-hidden="true">
-          <div class="ai-discussion-backdrop" data-close-ai></div>
-          <div class="ai-discussion-panel" role="dialog" aria-modal="true" aria-labelledby="ai-discussion-title">
-            <div class="ai-discussion-head">
-              <div>
-                <h3 id="ai-discussion-title">AI Project Discussion Assistant</h3>
-                <p>Susun kebutuhan proyek Anda sebelum mengisi form utama.</p>
-              </div>
-              <button type="button" class="ai-close-btn" data-close-ai aria-label="Close dialog">✕</button>
-            </div>
+    </main>
 
-            <div class="ai-discussion-grid">
-              <label>
-                <span>Mau service apa?</span>
-                <select id="ai-service-select">
-                  <option value="Web Development">Web Development</option>
-                  <option value="Mobile Apps Development">Mobile Apps Development</option>
-                  <option value="ERP System">ERP System</option>
-                  <option value="Digital Branding">Digital Branding</option>
-                  <option value="GIS">GIS</option>
-                  <option value="Internet of Things">Internet of Things</option>
-                  <option value="Cybersecurity">Cybersecurity</option>
-                </select>
-              </label>
-
-              <label>
-                <span>Mau membahas apa?</span>
-                <select id="ai-topic-select">
-                  <option value="Tujuan bisnis">Tujuan bisnis</option>
-                  <option value="Fitur utama">Fitur utama</option>
-                  <option value="Target user">Target user</option>
-                  <option value="Timeline dan prioritas">Timeline dan prioritas</option>
-                  <option value="Budget dan scope">Budget dan scope</option>
-                  <option value="Risiko dan kendala">Risiko dan kendala</option>
-                </select>
-              </label>
-            </div>
-
-            <div class="ai-help-section">
-              <div class="ai-help-title">AI ini bisa bantu apa saja?</div>
-              <div class="ai-help-list">
-                <button type="button" class="ai-help-chip" data-help="Merapikan deskripsi kebutuhan">Merapikan deskripsi kebutuhan</button>
-                <button type="button" class="ai-help-chip" data-help="Menyusun prioritas fitur">Menyusun prioritas fitur</button>
-                <button type="button" class="ai-help-chip" data-help="Membuat draft timeline">Membuat draft timeline</button>
-                <button type="button" class="ai-help-chip" data-help="Estimasi scope awal">Estimasi scope awal</button>
-                <button type="button" class="ai-help-chip" data-help="Menyusun pertanyaan klarifikasi">Menyusun pertanyaan klarifikasi</button>
-              </div>
-            </div>
-
-            <label class="ai-context-field">
-              <span>Ceritakan kondisi bisnis Anda (opsional)</span>
-              <textarea id="ai-context-input" rows="4" placeholder="Contoh: Saat ini proses masih manual, ingin digitalisasi agar laporan dan approval lebih cepat."></textarea>
-            </label>
-
-            <div class="ai-action-row">
-              <button type="button" class="ai-generate-btn" id="ai-generate-btn">Generate Draft Brief</button>
-              <button type="button" class="ai-secondary-btn" id="ai-insert-btn">Insert to Form</button>
-              <button type="button" class="ai-secondary-btn" id="ai-copy-btn">Copy Text</button>
-            </div>
-
-            <label class="ai-output-field">
-              <span>Draft hasil diskusi AI</span>
-              <textarea id="ai-output-text" rows="8" readonly placeholder="Hasil ringkasan AI akan muncul di sini..."></textarea>
-            </label>
-          </div>
-        </div>
-      </main>
-
-      <footer class="footer">
-        <div class="footer-inner">
-          <div class="footer-simple">
-            <div class="footer-brand-panel">
-              <div class="footer-brand-top">
-                <img
-                  class="footer-logo"
-                  src="img/ChatGPT Image 26 Feb 2026, 11.24.32.png"
-                  alt="Hexavara logo"
-                />
-                <div class="footer-brand-copy">
-                  <div class="footer-brand-name">Hexavara Technology</div>
-                  <div class="footer-brand-tag">Software Development and IT Consulting</div>
+    <!-- Footer -->
+    <footer class="bg-white text-slate-600 py-16 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-100 pb-12">
+                <div class="lg:col-span-2">
+                    <img src="img/brand-logo-main.png" alt="Hexavara logo"
+                        class="h-12 w-auto mb-6 opacity-90">
+                    <div class="footer-brand-name font-bold text-slate-900 text-xl mb-2">Hexavara Technology</div>
+                    <div class="footer-brand-tag text-slate-500 mb-6" data-i18n data-en="Software Development and IT Consulting" data-id="Pengembangan Perangkat Lunak dan Konsultan IT">Software Development and IT Consulting</div>
+                    <div class="footer-brand-description text-slate-500 text-base max-w-md">
+                        <strong class="text-slate-900">Surabaya</strong><br />
+                        Graha Bukopin Lantai 7 dan 12, Jl. Panglima Sudirman No. 10-18, Embong Kaliasin, Genteng, Kota
+                        Surabaya, Jawa Timur 60271
+                    </div>
                 </div>
-              </div>
-              <div class="footer-brand-description">
-                Surabaya<br />
-                Graha Bukopin Lantai 7 dan 12, Jl. Panglima Sudirman No. 10-18,
-                Embong Kaliasin, Genteng, Kota Surabaya, Jawa Timur 60271
-              </div>
-            </div>
-
-            <div class="footer-nav">
-              <div class="footer-links-group">
-                <div class="footer-heading">Company</div>
-                <a class="footer-link" href="works.html">Works</a>
-                <a class="footer-link" href="about_us.html">About Us</a>
-                <a class="footer-link" href="service.html">Services</a>
-                <a class="footer-link" href="solution.html">Solutions</a>
-              </div>
-
-              <div class="footer-links-group footer-contact-group">
-                <div class="footer-heading">Contact Us</div>
-                <div class="footer-contact-item">info@hexavara.com</div>
-                <div class="footer-contact-item">+628113451550</div>
-              </div>
-
-              <div class="footer-links-group">
-                <div class="footer-heading">Follow Us</div>
-                <div class="footer-social-links">
-                  <a class="footer-social-link" href="https://www.instagram.com/hexavara/" target="_blank" rel="noopener noreferrer" aria-label="Hexavara Instagram">
-                    <svg class="footer-social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/>
-                      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
-                      <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
-                    </svg>
-                    <span>Instagram</span>
-                  </a>
-                  <a class="footer-social-link" href="https://www.linkedin.com/company/hexavara-technology/" target="_blank" rel="noopener noreferrer" aria-label="Hexavara LinkedIn">
-                    <svg class="footer-social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke="currentColor" stroke-width="1.8"/>
-                      <rect x="7" y="10" width="2.4" height="7" fill="currentColor"/>
-                      <circle cx="8.2" cy="7.6" r="1.3" fill="currentColor"/>
-                      <path d="M12 10H14.4V11.2C14.9 10.4 15.9 9.8 17.2 9.8C19.6 9.8 20.5 11.4 20.5 13.9V17H18V14.2C18 13.1 17.6 12.3 16.5 12.3C15.4 12.3 14.8 13.1 14.8 14.2V17H12V10Z" fill="currentColor"/>
-                    </svg>
-                    <span>LinkedIn</span>
-                  </a>
-                  <a class="footer-social-link" href="https://api.whatsapp.com/send?phone=628113451550" target="_blank" rel="noopener noreferrer" aria-label="Hexavara WhatsApp">
-                    <svg class="footer-social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.6 14.3C17.3 14.1 16 13.5 15.6 13.3C15.2 13.2 14.9 13.1 14.6 13.5C14.3 13.8 13.6 14.6 13.3 14.9C13.1 15.2 12.8 15.2 12.5 15C11.9 14.7 10.6 14.2 9.5 13.2C8.6 12.4 8 11.4 7.7 11.1C7.5 10.8 7.6 10.5 7.8 10.3C8 10.1 8.2 9.8 8.4 9.5C8.6 9.2 8.7 9 8.8 8.7C9 8.3 8.9 8 8.8 7.8C8.7 7.6 8.1 6.3 7.7 5.5C7.3 4.7 6.9 4.8 6.6 4.8C6.4 4.8 6.1 4.8 5.8 4.8C5.5 4.8 5 4.9 4.6 5.3C4.2 5.7 3.2 6.7 3.2 8C3.2 9.3 4.7 10.6 4.9 10.9C5.1 11.2 7.8 15.5 11.6 17C12.5 17.3 13.2 17.6 13.8 17.8C14.7 18.1 15.5 18.1 16.2 18C16.9 18 18.4 17.2 18.8 16.3C19.2 15.4 19.2 14.6 19.1 14.5C19.1 14.3 18.8 14.4 17.6 14.3Z" fill="currentColor"/>
-                      <rect x="1" y="1" width="22" height="22" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                  </a>
+                <div>
+                    <h4 class="footer-heading text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm" data-i18n data-en="Company" data-id="Perusahaan">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="works.html" class="footer-link hover:text-blue-600 transition-colors" data-i18n data-en="Works" data-id="Portofolio">Works</a></li>
+                        <li><a href="about_us.html" class="footer-link hover:text-blue-600 transition-colors" data-i18n data-en="About Us" data-id="Tentang Kami">About Us</a>
+                        </li>
+                        <li><a href="service.html" class="footer-link hover:text-blue-600 transition-colors" data-i18n data-en="Services" data-id="Layanan">Services</a>
+                        </li>
+                        <li><a href="solution.html" class="footer-link hover:text-blue-600 transition-colors" data-i18n data-en="Solutions" data-id="Solusi">Solutions</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
+                <div>
+                    <h4 class="footer-heading text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm" data-i18n data-en="Contact Us" data-id="Hubungi Kami">Contact Us
+                    </h4>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-slate-400">mail</span> info@hexavara.com</li>
+                        <li class="flex items-center gap-3"><span
+                                class="material-symbols-outlined text-slate-400">call</span> +628113451550</li>
+                    </ul>
+                    <h4 class="footer-heading text-slate-900 font-bold mb-6 uppercase tracking-wider text-sm" data-i18n data-en="Follow Us" data-id="Ikuti Kami">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/hexavara"
+                            class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-hex-dark hover:text-white transition-colors"
+                            aria-label="Instagram">
+                            <svg class="w-5 h-5 text-slate-600 hover:text-inherit" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44c-.795 0-1.439-.645-1.439-1.44s.644-1.44 1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/company/hexavara"
+                            class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-hex-dark hover:text-white transition-colors"
+                            aria-label="LinkedIn">
+                            <svg class="w-5 h-5 text-slate-600 hover:text-inherit" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://api.whatsapp.com"
+                            class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-hex-dark hover:text-white transition-colors"
+                            aria-label="WhatsApp">
+                            <svg class="w-5 h-5 text-slate-600 hover:text-inherit" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.733 1.482h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="footer-bottom-bar">
-            <div class="footer-copyright">© 2026 Hexavara Tech. All rights reserved.</div>
-            <div class="footer-policy-links"></div>
-          </div>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="footer-copyright text-sm text-slate-400" data-i18n data-en="Â© 2026 Hexavara Tech. All rights reserved." data-id="Â© 2026 Hexavara Tech. Hak cipta dilindungi.">Â© 2026 Hexavara Tech. All rights reserved.</div>
+                <div class="mt-4 md:mt-0 flex gap-6 text-sm">
+                    <a href="#" class="hover:text-blue-600 transition-colors" data-i18n data-en="Privacy Policy" data-id="Kebijakan Privasi">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-600 transition-colors" data-i18n data-en="Terms of Service" data-id="Syarat Layanan">Terms of Service</a>
+                </div>
+            </div>
         </div>
-      </footer>
+    </footer>
 
-      <a class="float-btn to-top" href="#" aria-label="Back to top">
-        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
-      </a>
-    </div>
-
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
     <script>
-      (function () {
-        var trigger = document.getElementById('solutions-trigger');
-        var menu = document.getElementById('solutions-mega-menu');
-        var closeTimer = null;
-
-        if (!trigger || !menu) {
-          return;
+        // Custom function for localized alert
+        window.handleAIDiscussion = function() {
+            const lang = localStorage.getItem('hexavara-lang') || 'en';
+            const msg = lang === 'id' 
+                ? 'Fitur Diskusi dengan AI saat ini sedang dalam pengembangan tahap lanjut. Silakan tinggalkan kontak Anda pada form di bawah ini agar tim spesialis kami dapat menghubungi Anda.'
+                : 'The AI Discussion feature is currently in advanced development. Please leave your contact details in the form below so our specialist team can reach out to you.';
+            alert(msg);
+        };
+        
+        const aiBtn = document.getElementById('open-ai-discussion');
+        if (aiBtn) {
+            aiBtn.setAttribute('onclick', 'handleAIDiscussion()');
         }
 
-        function isOpen() {
-          return menu.classList.contains('is-open');
-        }
-
-        function openMenu() {
-          if (closeTimer) {
-            clearTimeout(closeTimer);
-            closeTimer = null;
-          }
-          menu.classList.add('is-open');
-          trigger.classList.add('is-open');
-          trigger.setAttribute('aria-expanded', 'true');
-          menu.setAttribute('aria-hidden', 'false');
-        }
-
-        function closeMenu() {
-          menu.classList.remove('is-open');
-          trigger.classList.remove('is-open');
-          trigger.setAttribute('aria-expanded', 'false');
-          menu.setAttribute('aria-hidden', 'true');
-        }
-
-        function scheduleClose() {
-          if (closeTimer) {
-            clearTimeout(closeTimer);
-          }
-          closeTimer = setTimeout(closeMenu, 120);
-        }
-
-        trigger.addEventListener('click', function (event) {
-          event.stopPropagation();
-          if (isOpen()) {
-            closeMenu();
-          } else {
-            openMenu();
-          }
-        });
-
-        trigger.addEventListener('mouseenter', openMenu);
-        trigger.addEventListener('mouseleave', scheduleClose);
-        menu.addEventListener('mouseenter', openMenu);
-        menu.addEventListener('mouseleave', scheduleClose);
-
-        document.addEventListener('click', function (event) {
-          if (!menu.contains(event.target) && !trigger.contains(event.target)) {
-            closeMenu();
-          }
-        });
-      })();
-
-      (function () {
-        var enBtn = document.getElementById('lang-en-btn');
-        var idBtn = document.getElementById('lang-id-btn');
-
-        if (!enBtn || !idBtn) {
-          return;
-        }
-
-        var translations = {
-          en: {
-            title: 'Hexavara - Start a Project',
-            nav: ['Works', 'About Us', 'Services', 'Solutions'],
-            solutionsTitles: ['Solution by Service', 'Solution by Industry', 'Ready to Use Platform'],
-            solutionsLinks: [
-              'Enterprise Resource Planning',
-              'Customer Relationship Management',
-              'Business Intelligence & Analytics',
-              'Cloud Migration & Strategy',
-              'Cybersecurity & Compliance',
-              'Consumer Goods',
-              'Healthcare',
-              'Supply Chain'
-            ],
-            platformNames: ['Crowdfunding', 'Corporate Budgeting', 'E-Commerce', 'Event Management', 'Multi-Merchant'],
-            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
-            headerCta: 'Start a Project?',
-            introTitle: 'Start a project and grow your business with techonology.',
-            introLine1: 'By fill in the form below or you could <a href="mailto:info@hexavara.com">send us an email.</a>',
-            introLine2: 'If you prefer to get more quick response and conversation, hit us up on <a href="https://wa.me/628113451550" target="_blank" rel="noopener noreferrer">whatsapp!</a>',
-            aiBannerTitle: 'Confused explaining your project?',
-            aiBannerDesc: 'Use AI Assistant to help summarize and structure your project needs clearly.',
-            aiBannerBtn: 'Discuss with AI First',
-            formTitle: 'Let us know about you',
-            fieldLabels: ['Name', 'Email', 'Phone Number', 'Your Company', 'Tell Us about your project'],
-            placeholders: ['Input your name', 'Input your email', 'Input your number', 'Input your company', 'Tell us more about the project you want to realize'],
-            sectionTitles: ['Choose the category', 'Budget (in IDR/Indonesian Rupiah)', 'Upload Project Brief'],
-            categoryChips: ['All', 'Web Development', 'Mobile Apps Development', 'GIS', 'Internet of Things', 'ERP', 'Accounting Software', 'Network Security', 'Endpoint Security', 'Cloud Security', 'Advertising', 'Digital Branding', 'Aerial Photography Videography', 'Videography', 'Branding', 'Motion Graphic', 'Graphic Design', '3D Assets'],
-            budgetChips: ['< 50JT', '50JT - 100JT', '100JT - 300JT', '300JT - 1M', '1M - 3M', '3M - 10M', '> 10M'],
-            uploadTitle: 'Click to Upload',
-            uploadCaption: 'SVG, PNG, JPG, DOCS, PDF or PPT (max. 5 MB)',
-            submitBtn: 'Send Request!',
-            modalTitle: 'AI Project Discussion Assistant',
-            modalDesc: 'Structure your project needs before filling out the main form.',
-            modalLabels: ['What service do you need?', 'What do you want to discuss?'],
-            serviceOptions: ['Web Development', 'Mobile Apps Development', 'ERP System', 'Digital Branding', 'GIS', 'Internet of Things', 'Cybersecurity'],
-            topicOptions: ['Business goals', 'Core features', 'Target users', 'Timeline and priorities', 'Budget and scope', 'Risks and constraints'],
-            aiHelpTitle: 'What can this AI help with?',
-            aiHelpItems: ['Refine requirement description', 'Prioritize features', 'Create timeline draft', 'Estimate initial scope', 'Prepare clarification questions'],
-            modalContextLabel: 'Describe your business context (optional)',
-            modalContextPlaceholder: 'Example: Our process is still manual and we want to digitize reporting and approval workflows.',
-            modalActions: ['Generate Draft Brief', 'Insert to Form', 'Copy Text'],
-            modalOutputLabel: 'AI discussion draft',
-            modalOutputPlaceholder: 'AI summary output will appear here...',
-            footerBrandTag: 'Software Development and IT Consulting',
-            footerHeadings: ['Company', 'Contact Us', 'Follow Us'],
-            footerLinks: ['Works', 'About Us', 'Services', 'Solutions'],
-            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
-            footerCopyright: '© 2026 Hexavara Tech. All rights reserved.'
-          },
-          id: {
-            title: 'Hexavara - Mulai Proyek',
-            nav: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
-            solutionsTitles: ['Solusi Berdasarkan Layanan', 'Solusi Berdasarkan Industri', 'Platform Siap Pakai'],
-            solutionsLinks: [
-              'Perencanaan Sumber Daya Perusahaan (ERP)',
-              'Manajemen Hubungan Pelanggan (CRM)',
-              'Business Intelligence & Analitik',
-              'Migrasi & Strategi Cloud',
-              'Keamanan Siber & Kepatuhan',
-              'Barang Konsumsi',
-              'Kesehatan',
-              'Rantai Pasok'
-            ],
-            platformNames: ['Crowdfunding', 'Anggaran Perusahaan', 'E-Commerce', 'Manajemen Acara', 'Multi-Merchant'],
-            platformMeta: ['Platform', 'Platform', 'Platform', 'Platform', 'Platform'],
-            headerCta: 'Mulai Proyek?',
-            introTitle: 'Mulai proyek dan kembangkan bisnis Anda dengan teknologi.',
-            introLine1: 'Isi form di bawah ini atau Anda bisa <a href="mailto:info@hexavara.com">kirim email ke kami.</a>',
-            introLine2: 'Jika Anda ingin respons lebih cepat, hubungi kami melalui <a href="https://wa.me/628113451550" target="_blank" rel="noopener noreferrer">WhatsApp!</a>',
-            aiBannerTitle: 'Masih bingung menjelaskan proyek Anda?',
-            aiBannerDesc: 'Gunakan AI Assistant untuk membantu merangkum dan menyusun kebutuhan proyek Anda dengan lebih jelas.',
-            aiBannerBtn: 'Diskusi dengan AI Dulu',
-            formTitle: 'Ceritakan kebutuhan Anda',
-            fieldLabels: ['Nama', 'Email', 'Nomor Telepon', 'Perusahaan', 'Ceritakan proyek Anda'],
-            placeholders: ['Masukkan nama Anda', 'Masukkan email Anda', 'Masukkan nomor telepon Anda', 'Masukkan nama perusahaan', 'Ceritakan kebutuhan proyek yang ingin Anda wujudkan'],
-            sectionTitles: ['Pilih kategori', 'Budget (dalam IDR/Rupiah)', 'Upload Ringkasan Proyek'],
-            categoryChips: ['Semua', 'Pengembangan Web', 'Pengembangan Aplikasi Mobile', 'GIS', 'Internet of Things', 'ERP', 'Software Akuntansi', 'Keamanan Jaringan', 'Keamanan Endpoint', 'Keamanan Cloud', 'Periklanan', 'Branding Digital', 'Fotografi & Videografi Udara', 'Videografi', 'Branding', 'Motion Graphic', 'Desain Grafis', 'Aset 3D'],
-            budgetChips: ['< 50JT', '50JT - 100JT', '100JT - 300JT', '300JT - 1M', '1M - 3M', '3M - 10M', '> 10M'],
-            uploadTitle: 'Klik untuk Upload',
-            uploadCaption: 'SVG, PNG, JPG, DOCS, PDF atau PPT (maks. 5 MB)',
-            submitBtn: 'Kirim Permintaan!',
-            modalTitle: 'Asisten Diskusi Proyek AI',
-            modalDesc: 'Susun kebutuhan proyek Anda sebelum mengisi form utama.',
-            modalLabels: ['Butuh layanan apa?', 'Ingin membahas apa?'],
-            serviceOptions: ['Pengembangan Web', 'Pengembangan Aplikasi Mobile', 'Sistem ERP', 'Branding Digital', 'GIS', 'Internet of Things', 'Keamanan Siber'],
-            topicOptions: ['Tujuan bisnis', 'Fitur utama', 'Target pengguna', 'Timeline dan prioritas', 'Budget dan scope', 'Risiko dan kendala'],
-            aiHelpTitle: 'AI ini bisa membantu apa saja?',
-            aiHelpItems: ['Merapikan deskripsi kebutuhan', 'Menyusun prioritas fitur', 'Membuat draft timeline', 'Estimasi scope awal', 'Menyusun pertanyaan klarifikasi'],
-            modalContextLabel: 'Ceritakan konteks bisnis Anda (opsional)',
-            modalContextPlaceholder: 'Contoh: Proses kami masih manual, ingin digitalisasi agar laporan dan approval lebih cepat.',
-            modalActions: ['Buat Draft Brief', 'Masukkan ke Form', 'Salin Teks'],
-            modalOutputLabel: 'Draft hasil diskusi AI',
-            modalOutputPlaceholder: 'Ringkasan dari AI akan tampil di sini...',
-            footerBrandTag: 'Pengembangan Software dan Konsultasi IT',
-            footerHeadings: ['Perusahaan', 'Kontak', 'Ikuti Kami'],
-            footerLinks: ['Portofolio', 'Tentang Kami', 'Layanan', 'Solusi'],
-            footerSocial: ['Instagram', 'LinkedIn', 'WhatsApp'],
-            footerCopyright: '© 2026 Hexavara Tech. Seluruh hak cipta dilindungi.'
-          }
+        // Custom function for localized form submission
+        window.handleSubmit = function() {
+            const lang = localStorage.getItem('hexavara-lang') || 'en';
+            const msg = lang === 'id'
+                ? 'Permintaan berhasil dikirim. Kami akan segera menghubungi Anda melalui email atau telepon.'
+                : 'Request sent successfully. We will contact you shortly via email or phone.';
+            alert(msg);
         };
 
-        function applyTextList(selector, list) {
-          var items = document.querySelectorAll(selector);
-          items.forEach(function (item, index) {
-            if (list[index]) {
-              item.textContent = list[index];
-            }
-          });
+        const submitBtn = document.querySelector('.submit-btn');
+        if (submitBtn) {
+            submitBtn.setAttribute('onclick', 'handleSubmit()');
         }
 
-        function applyOptionList(selector, list) {
-          var items = document.querySelectorAll(selector);
-          items.forEach(function (item, index) {
-            if (list[index]) {
-              item.textContent = list[index];
-              item.value = list[index];
-            }
-          });
-        }
-
-        function applyLanguage(lang) {
-          var config = translations[lang] || translations.en;
-          var introLines = document.querySelectorAll('.intro-section p');
-          var fieldLabels = document.querySelectorAll('.form-grid label span');
-          var formBlocks = document.querySelectorAll('.form-block h3');
-          var categoryChips = document.getElementById('category-chips');
-          var budgetChips = document.getElementById('budget-chips');
-          var uploadTitle = document.querySelector('.upload-title');
-          var uploadCaption = document.querySelector('.upload-caption');
-          var submitBtn = document.querySelector('.submit-btn');
-          var modalDesc = document.querySelector('.ai-discussion-head p');
-          var modalLabels = document.querySelectorAll('.ai-discussion-grid label span');
-          var contextLabel = document.querySelector('.ai-context-field span');
-          var contextInput = document.getElementById('ai-context-input');
-          var actionButtons = document.querySelectorAll('.ai-action-row button');
-          var outputLabel = document.querySelector('.ai-output-field span');
-          var outputText = document.getElementById('ai-output-text');
-
-          document.title = config.title;
-          document.documentElement.setAttribute('lang', lang);
-
-          applyTextList('.site-nav .nav-link', config.nav);
-          applyTextList('.solutions-mega-title', config.solutionsTitles);
-          applyTextList('.solutions-mega-link > span:last-child', config.solutionsLinks);
-          applyTextList('.solutions-platform-name', config.platformNames);
-          applyTextList('.solutions-platform-meta', config.platformMeta);
-          applyTextList('.footer-heading', config.footerHeadings);
-          applyTextList('.footer-link', config.footerLinks);
-          applyTextList('.footer-social-link span', config.footerSocial);
-
-          var headerCta = document.querySelector('.header-cta');
-          var introTitle = document.querySelector('.intro-section h1');
-          var aiBannerTitle = document.querySelector('.ai-assistant-copy h2');
-          var aiBannerDesc = document.querySelector('.ai-assistant-copy p');
-          var aiBannerBtn = document.getElementById('open-ai-discussion');
-          var formTitle = document.querySelector('.form-section h2');
-          var fullFieldLabel = document.querySelector('.full-field > span');
-          var formInputs = document.querySelectorAll('.form-grid input');
-          var formTextarea = document.querySelector('.full-field textarea');
-          var modalTitle = document.getElementById('ai-discussion-title');
-          var helpTitle = document.querySelector('.ai-help-title');
-          var helpChips = document.querySelectorAll('.ai-help-chip');
-          var footerBrandTag = document.querySelector('.footer-brand-tag');
-          var footerCopyright = document.querySelector('.footer-copyright');
-
-          if (headerCta) { headerCta.textContent = config.headerCta; }
-          if (introTitle) { introTitle.textContent = config.introTitle; }
-          if (introLines[0]) { introLines[0].innerHTML = config.introLine1; }
-          if (introLines[1]) { introLines[1].innerHTML = config.introLine2; }
-          if (aiBannerTitle) { aiBannerTitle.textContent = config.aiBannerTitle; }
-          if (aiBannerDesc) { aiBannerDesc.textContent = config.aiBannerDesc; }
-          if (aiBannerBtn) { aiBannerBtn.textContent = config.aiBannerBtn; }
-          if (formTitle) { formTitle.textContent = config.formTitle; }
-
-          fieldLabels.forEach(function (item, index) {
-            if (config.fieldLabels[index]) {
-              item.textContent = config.fieldLabels[index];
-            }
-          });
-
-          if (fullFieldLabel) { fullFieldLabel.textContent = config.fieldLabels[4]; }
-
-          formInputs.forEach(function (item, index) {
-            if (config.placeholders[index]) {
-              item.placeholder = config.placeholders[index];
-            }
-          });
-
-          if (formTextarea) { formTextarea.placeholder = config.placeholders[4]; }
-
-          formBlocks.forEach(function (item, index) {
-            if (config.sectionTitles[index]) {
-              item.textContent = config.sectionTitles[index];
-            }
-          });
-
-          if (categoryChips) {
-            applyTextList('#category-chips .chip', config.categoryChips);
-          }
-          if (budgetChips) {
-            applyTextList('#budget-chips .chip', config.budgetChips);
-          }
-
-          if (uploadTitle) { uploadTitle.textContent = config.uploadTitle; }
-          if (uploadCaption) { uploadCaption.textContent = config.uploadCaption; }
-          if (submitBtn) { submitBtn.textContent = config.submitBtn; }
-
-          if (modalTitle) { modalTitle.textContent = config.modalTitle; }
-          if (modalDesc) { modalDesc.textContent = config.modalDesc; }
-          modalLabels.forEach(function (item, index) {
-            if (config.modalLabels[index]) {
-              item.textContent = config.modalLabels[index];
-            }
-          });
-
-          applyOptionList('#ai-service-select option', config.serviceOptions);
-          applyOptionList('#ai-topic-select option', config.topicOptions);
-
-          if (helpTitle) { helpTitle.textContent = config.aiHelpTitle; }
-          helpChips.forEach(function (item, index) {
-            if (config.aiHelpItems[index]) {
-              item.textContent = config.aiHelpItems[index];
-            }
-          });
-
-          if (contextLabel) { contextLabel.textContent = config.modalContextLabel; }
-          if (contextInput) { contextInput.placeholder = config.modalContextPlaceholder; }
-
-          actionButtons.forEach(function (item, index) {
-            if (config.modalActions[index]) {
-              item.textContent = config.modalActions[index];
-            }
-          });
-
-          if (outputLabel) { outputLabel.textContent = config.modalOutputLabel; }
-          if (outputText) { outputText.placeholder = config.modalOutputPlaceholder; }
-
-          if (footerBrandTag) { footerBrandTag.textContent = config.footerBrandTag; }
-          if (footerCopyright) { footerCopyright.textContent = config.footerCopyright; }
-        }
-
-        function setActive(lang) {
-          var isEnglish = lang === 'en';
-          enBtn.classList.toggle('active', isEnglish);
-          idBtn.classList.toggle('active', !isEnglish);
-          enBtn.setAttribute('aria-pressed', isEnglish ? 'true' : 'false');
-          idBtn.setAttribute('aria-pressed', isEnglish ? 'false' : 'true');
-          applyLanguage(lang);
-          localStorage.setItem('hexavara-lang', lang);
-        }
-
-        enBtn.addEventListener('click', function () {
-          setActive('en');
-        });
-
-        idBtn.addEventListener('click', function () {
-          setActive('id');
-        });
-
-        var storedLanguage = localStorage.getItem('hexavara-lang');
-        setActive(storedLanguage === 'id' ? 'id' : 'en');
-      })();
-
-      (function () {
-        var chipGroups = document.querySelectorAll('.form-block .chips');
-
+        // Chips Selection Logic
+        const chipGroups = document.querySelectorAll('.form-block .chips');
         chipGroups.forEach(function (group) {
-          var chips = group.querySelectorAll('.chip');
-
+          const chips = group.querySelectorAll('.chip');
           chips.forEach(function (chip) {
             chip.addEventListener('click', function () {
               chips.forEach(function (item) {
                 item.classList.remove('chip-active');
                 item.classList.remove('is-selected');
+                item.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                item.classList.add('bg-white', 'text-slate-600', 'border-slate-300');
               });
-              chip.classList.add('is-selected');
+              chip.classList.add('is-selected', 'bg-blue-600', 'text-white', 'border-blue-600');
+              chip.classList.remove('bg-white', 'text-slate-600');
             });
           });
         });
-      })();
-
-      (function () {
-        var openBtn = document.getElementById('open-ai-discussion');
-        var modal = document.getElementById('ai-discussion-modal');
-        var closeEls = document.querySelectorAll('[data-close-ai]');
-        var serviceSelect = document.getElementById('ai-service-select');
-        var topicSelect = document.getElementById('ai-topic-select');
-        var contextInput = document.getElementById('ai-context-input');
-        var outputText = document.getElementById('ai-output-text');
-        var generateBtn = document.getElementById('ai-generate-btn');
-        var insertBtn = document.getElementById('ai-insert-btn');
-        var copyBtn = document.getElementById('ai-copy-btn');
-        var helpChips = document.querySelectorAll('.ai-help-chip');
-        var projectTextarea = document.querySelector('.full-field textarea');
-
-        if (!openBtn || !modal || !generateBtn || !outputText) {
-          return;
-        }
-
-        function openModal() {
-          modal.classList.add('is-open');
-          modal.setAttribute('aria-hidden', 'false');
-        }
-
-        function closeModal() {
-          modal.classList.remove('is-open');
-          modal.setAttribute('aria-hidden', 'true');
-        }
-
-        function getSelectedHelps() {
-          var selected = [];
-          helpChips.forEach(function (chip) {
-            if (chip.classList.contains('is-selected')) {
-              selected.push(chip.textContent.trim());
-            }
-          });
-          return selected;
-        }
-
-        function buildDraft() {
-          var lang = document.documentElement.getAttribute('lang') === 'id' ? 'id' : 'en';
-          var service = serviceSelect ? serviceSelect.value : 'Digital Solution';
-          var topic = topicSelect ? topicSelect.value : (lang === 'id' ? 'Tujuan bisnis' : 'Business goals');
-          var context = contextInput ? contextInput.value.trim() : '';
-          var helps = getSelectedHelps();
-
-          var lines = [];
-          if (lang === 'id') {
-            lines.push('Ringkasan Kebutuhan Proyek');
-            lines.push('Layanan yang dibutuhkan: ' + service);
-            lines.push('Fokus diskusi: ' + topic);
-          } else {
-            lines.push('Project Requirement Summary');
-            lines.push('Requested service: ' + service);
-            lines.push('Discussion focus: ' + topic);
-          }
-
-          if (helps.length) {
-            lines.push((lang === 'id' ? 'Bantuan AI yang dipilih: ' : 'Selected AI support: ') + helps.join(', '));
-          }
-
-          if (context) {
-            lines.push((lang === 'id' ? 'Konteks bisnis saat ini: ' : 'Current business context: ') + context);
-          }
-
-          lines.push('');
-          if (lang === 'id') {
-            lines.push('Output yang diharapkan:');
-            lines.push('- Solusi yang relevan dengan kebutuhan bisnis');
-            lines.push('- Prioritas fitur fase awal');
-            lines.push('- Estimasi timeline implementasi');
-            lines.push('- Batasan budget/scope yang perlu dipertimbangkan');
-            lines.push('');
-            lines.push('Pertanyaan klarifikasi dari AI:');
-            lines.push('1. Siapa pengguna utama solusi ini?');
-            lines.push('2. Proses apa yang paling mendesak untuk diperbaiki?');
-            lines.push('3. Kapan target go-live yang diinginkan?');
-          } else {
-            lines.push('Expected output:');
-            lines.push('- Solution aligned with business needs');
-            lines.push('- Initial feature priorities');
-            lines.push('- Estimated implementation timeline');
-            lines.push('- Budget/scope constraints to consider');
-            lines.push('');
-            lines.push('AI clarification questions:');
-            lines.push('1. Who are the primary users of this solution?');
-            lines.push('2. Which process is the most urgent to improve?');
-            lines.push('3. What is your expected go-live timeline?');
-          }
-
-          return lines.join('\n');
-        }
-
-        openBtn.addEventListener('click', openModal);
-
-        closeEls.forEach(function (el) {
-          el.addEventListener('click', closeModal);
-        });
-
-        document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-            closeModal();
-          }
-        });
-
-        helpChips.forEach(function (chip) {
-          chip.addEventListener('click', function () {
-            chip.classList.toggle('is-selected');
-          });
-        });
-
-        generateBtn.addEventListener('click', function () {
-          outputText.value = buildDraft();
-        });
-
-        insertBtn.addEventListener('click', function () {
-          if (!outputText.value) {
-            outputText.value = buildDraft();
-          }
-          if (projectTextarea) {
-            projectTextarea.value = outputText.value;
-          }
-          closeModal();
-        });
-
-        copyBtn.addEventListener('click', function () {
-          if (!outputText.value) {
-            outputText.value = buildDraft();
-          }
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(outputText.value);
-          }
-        });
-      })();
-
-      (function () {
-        var toTopBtn = document.querySelector('.float-btn.to-top');
-
-        if (!toTopBtn) {
-          return;
-        }
-
-        function updateToTopVisibility() {
-          var scrollY = window.scrollY || window.pageYOffset;
-          var viewportHeight = window.innerHeight;
-          var fullHeight = document.documentElement.scrollHeight;
-          var remaining = fullHeight - (scrollY + viewportHeight);
-          var showThreshold = Math.max(80, viewportHeight * 0.18);
-
-          if (remaining <= showThreshold) {
-            toTopBtn.classList.add('is-visible');
-          } else {
-            toTopBtn.classList.remove('is-visible');
-          }
-        }
-
-        toTopBtn.addEventListener('click', function (event) {
-          event.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', updateToTopVisibility, { passive: true });
-        window.addEventListener('resize', updateToTopVisibility);
-        updateToTopVisibility();
-      })();
     </script>
-  </body>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+</body>
 </html>

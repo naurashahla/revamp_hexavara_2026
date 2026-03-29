@@ -1,0 +1,25 @@
+{
+  "name": "hexavara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css",
+    "watch": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naurashahla/revamp_hexavara_2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naurashahla/revamp_hexavara_2026/issues"
+  },
+  "homepage": "https://github.com/naurashahla/revamp_hexavara_2026#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
